@@ -442,7 +442,8 @@
       Object.keys(doors).forEach(function (k) {
         doors[k].classList.toggle('active', k === a.getAttribute('data-door'));
       });
-      window.scrollTo(0, 0);
+      // no scroll: the tabs stay put so the reader can see the content
+      // beneath them change in place.
     });
   });
 })();
