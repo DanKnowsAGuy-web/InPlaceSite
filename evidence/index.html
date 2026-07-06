@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="In-Place BaseGrade: soil densification delivered as a liquid. Engineering evidence with verification status on every claim.">
+<title>In-Place BaseGrade: The Evidence</title>
+<style>
+  *{box-sizing:border-box}
+  :root{
+    --ground:#F6F4EF;      /* limestone */
+    --paper:#FFFFFF;
+    --ink:#24211B;         /* warm near-black */
+    --ink-soft:#5C564B;
+    --line:#DAD5CA;
+    --accent:#6B4A2B;      /* subsoil brown */
+    --lab:#2E6B4F;         /* signed lab */
+    --spec:#33587A;        /* manufacturer spec */
+    --field:#96660F;       /* field-observed */
+    --open:#8A857C;        /* under verification */
+    --lab-bg:#EAF2ED; --spec-bg:#EAF0F6; --field-bg:#F6EFDE; --open-bg:#EFEDE8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font:16px/1.65 "Segoe UI",-apple-system,"Helvetica Neue",Arial,sans-serif;}
+  .mono{font-family:Consolas,"SF Mono",Menlo,monospace;}
+  h1,h2,h3{font-family:Rockwell,"Roboto Slab",Georgia,serif;line-height:1.2;text-wrap:balance;margin:0;}
+
+  .draftbar{background:var(--ink);color:#EDE9E0;text-align:center;
+    font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;padding:7px 16px;}
+  .draftbar b{color:#F0C86C;}
+
+  .wrap{max-width:780px;margin:0 auto;padding:0 22px;}
+
+  header.site{padding:44px 0 30px;border-bottom:3px solid var(--ink);}
+  .eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+    font-weight:600;margin-bottom:10px;}
+  header.site h1{font-size:clamp(28px,5vw,40px);font-weight:700;}
+  .tagline{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-size:17px;color:var(--accent);
+    margin-top:6px;font-style:italic;}
+  header.site p.lede{margin:14px 0 0;font-size:17.5px;color:var(--ink-soft);max-width:60ch;}
+  header.site p.lede strong{color:var(--ink);}
+
+  /* soil horizon strip — the identity mark */
+  .horizon{display:flex;height:10px;width:120px;margin-bottom:18px;}
+  .horizon i{flex:1}
+  .horizon i:nth-child(1){background:#3E3428}
+  .horizon i:nth-child(2){background:#6B4A2B}
+  .horizon i:nth-child(3){background:#A5825A}
+  .horizon i:nth-child(4){background:#CBB58F}
+
+  nav.doors{display:flex;gap:10px;margin:22px 0 0;flex-wrap:wrap;}
+  nav.doors a{font-size:13.5px;font-weight:600;text-decoration:none;color:var(--ink-soft);
+    border:1px solid var(--line);background:var(--paper);padding:7px 14px;border-radius:3px;}
+  nav.doors a.active{color:#fff;background:var(--accent);border-color:var(--accent);}
+
+  /* legend */
+  .legend{margin:30px 0 6px;padding:16px 18px;background:var(--paper);border:1px solid var(--line);}
+  .legend h3{font-size:15px;margin-bottom:10px;}
+  .legend ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;}
+  .legend li{font-size:14px;color:var(--ink-soft);display:flex;align-items:baseline;gap:9px;}
+
+  .chip{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.07em;
+    text-transform:uppercase;padding:2px 9px;border-radius:2px;white-space:nowrap;}
+  .chip.lab{color:var(--lab);background:var(--lab-bg);}
+  .chip.spec{color:var(--spec);background:var(--spec-bg);}
+  .chip.field{color:var(--field);background:var(--field-bg);}
+  .chip.open{color:#6d675c;background:var(--open-bg);}
+
+  section{margin:44px 0;}
+  section > h2{font-size:22px;padding-bottom:8px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:12px;}
+  section > h2 .strat{width:8px;height:26px;display:inline-flex;flex-direction:column;flex:none;}
+  section > h2 .strat i{flex:1}
+  section > p.intro{color:var(--ink-soft);margin:12px 0 0;max-width:64ch;}
+
+  .card{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--open);
+    padding:18px 20px 16px;margin-top:16px;}
+  .card.lab{border-left-color:var(--lab);}
+  .card.spec{border-left-color:var(--spec);}
+  .card.field{border-left-color:var(--field);}
+  .card .head{display:flex;justify-content:space-between;gap:14px;align-items:baseline;}
+  .card h3{font-size:17.5px;max-width:46ch;}
+  .card .value{font-family:Consolas,Menlo,monospace;font-variant-numeric:tabular-nums;
+    font-size:15px;margin:12px 0 10px;color:var(--ink);}
+  .card .value b{font-size:19px;}
+  .card .src{font-size:13px;color:var(--ink-soft);border-top:1px dashed var(--line);
+    padding-top:9px;margin-top:4px;}
+  .card .src a{color:var(--accent);}
+  .card .caveat{font-size:13.5px;color:var(--field);margin-top:8px;}
+
+  table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);
+    font-size:14.5px;margin-top:16px;}
+  th{font-size:12px;letter-spacing:.09em;text-transform:uppercase;text-align:left;
+    color:var(--ink-soft);border-bottom:2px solid var(--ink);padding:10px 12px;}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td.yr{font-family:Consolas,monospace;white-space:nowrap;color:var(--accent);font-weight:600;}
+  .tablewrap{overflow-x:auto;}
+
+  .openlist{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px;}
+  .openlist li{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--open);
+    padding:12px 16px;font-size:14.5px;color:var(--ink-soft);}
+  .openlist li b{color:var(--ink);}
+
+  .honesty{margin-top:18px;padding:16px 18px;background:#EFEBE2;border:1px solid #DDD5C4;
+    font-size:14.5px;color:var(--ink-soft);}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;}
+  .steps .step{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--accent);
+    padding:14px 16px;}
+  .steps .step .k{font-family:Consolas,Menlo,monospace;font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .steps .step h3{font-size:16px;margin:6px 0 6px;}
+  .steps .step p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+  @media (max-width:640px){ .steps{grid-template-columns:1fr;} }
+
+  .compare{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;}
+  .compare .way{background:#F0EDE5;border:1px solid var(--line);border-top:4px solid #B7B0A2;
+    padding:14px 16px;}
+  .compare .way.new{background:var(--paper);border-top-color:var(--accent);}
+  .compare .way .k{font-family:Consolas,Menlo,monospace;font-size:11.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:#8A857C;font-weight:700;}
+  .compare .way.new .k{color:var(--accent);}
+  .compare .way h3{font-size:16px;margin:6px 0 6px;}
+  .compare .way p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+  @media (max-width:640px){ .compare{grid-template-columns:1fr;} }
+
+  footer{margin:56px 0 0;padding:24px 0 48px;border-top:3px solid var(--ink);
+    font-size:13.5px;color:var(--ink-soft);}
+  footer .mono{font-size:12.5px;}
+  a{color:var(--accent);}
+  @media (max-width:560px){ .card .head{flex-direction:column;gap:6px;} }
+
+  .door{display:none;}
+  .door.active{display:block;}
+</style>
+</head>
+<body>
+
+<div class="draftbar"><b>Working draft.</b> Source documents are available on request; linked source pages are being added.</div>
+
+<div class="wrap">
+<header class="site">
+  <div class="horizon" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="eyebrow">Engineering Evidence Summary</div>
+  <h1>In-Place BaseGrade</h1>
+  <div class="tagline">Soil densification, delivered as a liquid.</div>
+  <p class="lede">Every weak subgrade presents the same expensive choice. The old way: truck in thousands of tons of aggregate, or chemically alter the soil with lime or cement. The new way: make the ground already on site carry the load, by density rather than chemistry. The liquid <strong>disperses</strong> by chasing the soil's own moisture, lubricating particles and filling voids and cracks; <strong>compaction</strong> then densifies the soil far beyond what water alone allows; and as it <strong>cures</strong>, it acts as a binder that locks the density in, leaving the soil and aggregate chemically unchanged. It works the way geotextiles and stabilized earth work: structurally, with the material in place. Hence the name.</p>
+  <p class="lede" style="font-size:14.5px;margin-top:12px;">Every figure on this page carries a verification label and a link to its source document. Where our documentation is unresolved, we say so.</p>
+  <nav class="doors">
+    <a class="active" href="#" data-door="eng">For engineers &amp; DOTs</a>
+    <a href="#" data-door="con">For contractors</a>
+    <a href="#" data-door="biz">For business evaluation</a>
+  </nav>
+</header>
+
+<div class="legend">
+  <h3>How to read this page</h3>
+  <ul>
+    <li><span class="chip lab">Signed lab</span> From a signed report by an accredited laboratory. Original available on request.</li>
+    <li><span class="chip spec">Mfr. spec</span> From the manufacturer's datasheet or MSDS. Quantified, but not third-party verified.</li>
+    <li><span class="chip field">Field record</span> Documented project history: dates, photos, correspondence. Not instrumented testing.</li>
+    <li><span class="chip open">Verifying</span> Sources conflict or documentation is incomplete. We publish the gap instead of picking a number.</li>
+  </ul>
+</div>
+
+<div class="door active" id="door-eng">
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#6B4A2B"></i><i style="background:#A5825A"></i></span>The mechanism is mechanical</h2>
+  <p class="intro">No reaction with the soil is involved. The liquid does its work by geometry and compaction, the same logic as a geotextile or mechanically stabilized earth, delivered as a fluid. Three steps: <strong>disperse, compact, cure.</strong></p>
+  <div class="steps">
+    <div class="step">
+      <div class="k">1 · Disperse</div>
+      <h3>It chases the soil's own moisture.</h3>
+      <p>The liquid follows in-situ moisture through the soil mass, lubricating fines and filling voids, cracks, and pore space between aggregates.</p>
+    </div>
+    <div class="step">
+      <div class="k">2 · Compact</div>
+      <h3>Compaction does the structural work.</h3>
+      <p>With particles lubricated and voids filled, rolling densifies the soil beyond what water alone allows. The strength gain is densification.</p>
+    </div>
+    <div class="step">
+      <div class="k">3 · Cure</div>
+      <h3>Drying locks the matrix in place.</h3>
+      <p>Only as the compacted soil dries does the material act as a binder, holding the densified structure. The soil and aggregate are chemically unchanged.</p>
+    </div>
+  </div>
+  <div class="src" style="font-size:13px;color:var(--ink-soft);margin-top:10px;">Mechanism as documented in product engineering materials · <a href="#">source</a></div>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#B7B0A2"></i><i style="background:#6B4A2B"></i></span>Density is the name of the game</h2>
+  <p class="intro">An unbound base fails when its particles can move under load. Density is what stops them. Engineers know this; we state it anyway, because it is the test every stabilization method should be judged by: <strong>how much of the soil mass does it actually densify?</strong></p>
+  <div class="compare">
+    <div class="way">
+      <div class="k">The old way · chemical</div>
+      <h3>Lime and cement</h3>
+      <p>They work by reaction, so they are soil-selective: lime wants reactive clays, and cement struggles in organic and sulfate-bearing soils. What the reaction builds is rigid: all compressive strength, no tensile capacity. Under rutting and deflection it cracks, and cracks are where bases begin to die.</p>
+    </div>
+    <div class="way">
+      <div class="k">The old way · planar</div>
+      <h3>Geotextiles and geogrids</h3>
+      <p>The right instinct, mechanical, but a geometrically limited tool. A grid confines soil at the elevation where it is laid and nowhere else. It cannot flow into a void or tighten a loose pocket; the density it adds is local and shallow.</p>
+    </div>
+    <div class="way new">
+      <div class="k">The new way · volumetric</div>
+      <h3>Liquid densification</h3>
+      <p>A liquid reaches everywhere the soil's own moisture reaches: every void, crack, and pore across the full treated depth. That is the point of the form factor. Disperse, compact, cure densifies the entire mass, and the cured base is semi-flexible by design: it deflects rather than fractures.</p>
+    </div>
+  </div>
+  <p class="intro" style="margin-top:14px;">One more thing pavement engineering has always known: the industry's own name for an asphalt road is a <em>flexible pavement</em>. Maximum hardness was never the goal. A base should be strong the way ground is strong: dense enough to hold, supple enough to move with loading, weather, and time. <strong>Rigid things break. Dense things last.</strong></p>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#3E3428"></i><i style="background:#A5825A"></i></span>Strength evidence</h2>
+  <p class="intro">Disperse, compact, cure leaves one measurable thing behind: density, and the strength that comes with it. The results below are accredited-lab measurements of that end state, treated versus untreated.</p>
+
+  <div class="card lab">
+    <div class="head">
+      <h3>Treatment roughly doubled the bearing strength of native soil.</h3>
+      <span class="chip lab">Signed lab</span>
+    </div>
+    <div class="value">CBR @ 100% max density&nbsp;&nbsp;untreated <b>68%</b> → treated <b>98 / 120 / 125%</b> by dose</div>
+    <div class="src">RCF Laboratorios S.R.L., Arequipa, Peru · ISO/IEC 17025 accredited · NTP 339.145 (ASTM D1883) · Report AM 389, Oct 2017 · <a href="#">source</a></div>
+    <div class="caveat">Dose attribution for the 120% result is being confirmed against the report's dose series.</div>
+  </div>
+
+  <div class="card lab">
+    <div class="head">
+      <h3>Bound recycled asphalt reached concrete-range compressive strength and held it under water.</h3>
+      <span class="chip lab">Signed lab</span>
+    </div>
+    <div class="value">RAP + binder, air-cured&nbsp;&nbsp;avg <b>5,607–6,265 psi</b> · retention after hot-water cure <b>60%</b>, <b>72.8%</b> with sealer</div>
+    <div class="src">Geotechnical Testing Services Inc., Yuma AZ · AASHTO-accredited · 2014 · <a href="#">source</a></div>
+  </div>
+
+  <div class="card field">
+    <div class="head">
+      <h3>Stability climbed roughly threefold over ten days of cure in Marshall testing.</h3>
+      <span class="chip field">Field record</span>
+    </div>
+    <div class="value">Aggregate base&nbsp;<b>2,528 → 8,335 lb</b> (4 hr → 10 day) · asphalt millings&nbsp;<b>3,444 → 8,019 lb</b></div>
+    <div class="src">Values reproduced in presentation materials (ASTM C117 / D1559 referenced) · <a href="#">source</a></div>
+    <div class="caveat">The original signed Marshall report is not yet in our archive; we label these accordingly until it is.</div>
+  </div>
+
+  <div class="card lab">
+    <div class="head">
+      <h3>Paired with a small cement dose, strength multiplies.</h3>
+      <span class="chip lab">Signed lab</span>
+    </div>
+    <div class="value">North Dakota clays, 21-day: 5% cement alone <b>322 psi</b> · binder alone 223 psi · cement + binder <b>664&#8211;746 psi</b> (2&#8211;3&#215; cement alone)</div>
+    <div class="src">Geotechnical Testing Services Inc., Yuma AZ · Williston ND design mix · Lab Log 11-0465 · 2011&#8211;12 · <a href="#">source</a></div>
+  </div>
+
+  <h3 style="font-family:Rockwell,'Roboto Slab',Georgia,serif;font-size:17px;margin:26px 0 4px;">More accredited results, surfaced by the 2026 full-archive review</h3>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Result</th><th>Source</th><th>Status</th></tr>
+    <tr><td>Crushed RAP: VRS/CBR <b>83% &#8594; 106%</b> moving 6:1 to 5:1 dose; <b>meets SCT hydraulic-base specification</b> (Mexico's federal roads standard)</td><td>Servicios y Control en Ingenier&#237;a, Jalisco MX, Sept 2016</td><td><span class="chip lab">Signed lab</span></td></tr>
+    <tr><td>Cement paste with 0.1% binder: compressive strength <b>+98% at 7 days, +129% at 14 days</b> vs control</td><td>Universidad Aut&#243;noma de Sinaloa (report date under confirmation; a separate 2018 San Diego cylinder trial ran below control, so concrete-admixture evidence is mixed and under reconciliation)</td><td><span class="chip open">Verifying</span></td></tr>
+    <tr><td>CBR across soil types: natural <b>46 &#8594; 74</b>, clay-rich <b>31.9 &#8594; 63.3</b>; cure curve 80% strength at 4 days, full at 18&#8211;20</td><td>Baja California MX, Sept 2025 (most recent data)</td><td><span class="chip lab">Lab report</span></td></tr>
+    <tr><td>Recycled aggregate base + binder: CBR <b>49 at 98.5% compaction</b></td><td>Speedie &amp; Associates, Phoenix AZ, 2015 (independent, non-GTS lab)</td><td><span class="chip lab">Signed lab</span></td></tr>
+    <tr><td>Ten-plus years of testing across all AASHTO soil classes, "windblown sand to expansive clay"; <b>reduces plasticity index of expansive clays</b></td><td>GTS certification letter, Courtney Arviso, P.E., Oct 2019</td><td><span class="chip lab">Signed P.E. letter</span></td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#6B4A2B"></i><i style="background:#CBB58F"></i></span>Material &amp; environmental profile</h2>
+  <p class="intro">The liquid's own composition matters for handling, transport, and environmental review, not for the mechanism, which is mechanical.</p>
+
+  <div class="card spec">
+    <div class="head">
+      <h3>The carrier liquid is benign: neutral pH, non-flammable, unregulated for transport.</h3>
+      <span class="chip spec">Mfr. spec</span>
+    </div>
+    <div class="value">Water 90–93% · PVA &lt;10% · PET &lt;6% · pH 7–8 · SG 1.05 · NFPA 1-0-0 · not DOT/IATA/IMDG regulated</div>
+    <div class="src">Product MSDS R1 · <a href="#">source</a></div>
+  </div>
+
+  <div class="card spec">
+    <div class="head">
+      <h3>Applicable across the AASHTO soil range, from gravels to fat clays.</h3>
+      <span class="chip spec">Mfr. spec</span>
+    </div>
+    <div class="value">Soil classes <b>A-1-a through A-7-6</b> · plasticity index reduction 40–50% (manufacturer-claimed)</div>
+    <div class="src">Technical Data Sheet, 2018 · dilution set per-project by laboratory mix design · <a href="#">source</a></div>
+  </div>
+
+  <div class="card spec">
+    <div class="head">
+      <h3>Tested non-toxic and substantially biodegradable.</h3>
+      <span class="chip spec">Mfr. spec</span>
+    </div>
+    <div class="value">~90% biodegradable (OECD 302B) · oral LD50 &gt;5,000 mg/kg (rat) · Ames negative</div>
+    <div class="src">Technical Data Sheet &amp; Ecological Information, 2018 · <a href="#">source</a></div>
+    <div class="caveat">Aquatic-toxicity figures conflict between the MSDS and TDS (dilution basis unstated); listed under Verifying below, not quoted here.</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#3E3428"></i><i style="background:#6B4A2B"></i></span>Field history</h2>
+  <p class="intro">Two decades of disperse, compact, cure in the field. These are records of real work, not instrumented performance studies unless noted.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Year</th><th>Site</th><th>Record</th></tr>
+    <tr><td class="yr">2007</td><td>Prescott, AZ</td><td>First application (Garland Drive); ~15 miles of roadways through 2010. Revisited 2018, surface still performing; rechecked 2026, nineteen years in service. <span class="chip field">Field record</span> <span class="chip open">2026 recheck: documentation in progress</span></td></tr>
+    <tr><td class="yr">2012</td><td>Shanghai, China</td><td>Street base stabilization. <span class="chip field">Field record</span></td></tr>
+    <tr><td class="yr">2013</td><td>South Bend, IN</td><td>One mile of failed road reclaimed; chip-sealed the following day. <span class="chip field">Field record</span></td></tr>
+    <tr><td class="yr">2016–17</td><td>BNSF Railway, Belen NM</td><td>Demonstration under BNSF supervision; MSDS accepted; treated berm intact after 2017 record rains. No vendor approval or order is on record, and we state that plainly. <span class="chip field">Field record</span></td></tr>
+    <tr><td class="yr">2017–18</td><td>Arequipa, Peru</td><td>Municipal field trial with the accredited CBR series above, the strongest single data set in our archive. <span class="chip lab">Signed lab</span></td></tr>
+    <tr><td class="yr">2017–26</td><td>Arequipa, Peru</td><td>A built-in control group: one continuous road, one section treated. Through 2026, the untreated length has required dozens of pothole repairs; the treated section, none reported. Same road, same traffic, same weather. <span class="chip open">Documentation in progress</span></td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#8A857C"></i><i style="background:#CBB58F"></i></span>What we are still verifying</h2>
+  <p class="intro">Our documentation spans nearly two decades and several corporate iterations. Where sources disagree, we hold the claim rather than publish the favorable number.</p>
+  <ul class="openlist">
+    <li><b>Application dosage.</b> Field records and cost models imply rates differing by roughly 4×. Dosage is mix-design-dependent; a per-project lab design governs until reconciled.</li>
+    <li><b>Structural layer coefficient (a2).</b> The basis for pavement-design credit of the treated base is being documented before we publish savings comparisons.</li>
+    <li><b>Cost-savings percentage.</b> Historical materials quote 20–35%. We publish a calculator with explicit assumptions instead of a headline number.</li>
+    <li><b>Chemical classification.</b> Legacy materials describe the product inconsistently (polymer vs. non-polymer; asphaltic vs. non-asphaltic). The MSDS composition above is the controlling document.</li>
+    <li><b>Aquatic toxicity values.</b> MSDS and TDS figures differ ~100×, likely a dilution-basis discrepancy; confirmation requested from the manufacturer.</li>
+  </ul>
+  <div class="honesty">Why show this? Because you'd find it anyway. We'd rather you audit our evidence with the gaps labeled than discover them unlabeled.</div>
+</section>
+
+</div><!-- /door-eng -->
+
+<div class="door" id="door-con">
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#6B4A2B"></i><i style="background:#A5825A"></i></span>Your iron, your soil, your schedule</h2>
+  <p class="intro">No specialty crews, no exotic equipment, no waiting on aggregate deliveries. If you can run a reclaimer, a water truck, and rollers, you can place this. The process is the same three steps everywhere: <strong>disperse, compact, cure.</strong></p>
+  <div class="steps">
+    <div class="step">
+      <div class="k">1 &#183; Disperse</div>
+      <h3>It rides your water truck.</h3>
+      <p>Add concentrate to the full tank, recirculate at least 10 minutes, spray and blend into the ripped soil to optimum moisture. The liquid follows the moisture into every void.</p>
+    </div>
+    <div class="step">
+      <div class="k">2 &#183; Compact</div>
+      <h3>Your rollers do the strength-building.</h3>
+      <p>Padfoot, then smooth drum, until density stops climbing. The compaction you already know how to do IS the product working.</p>
+    </div>
+    <div class="step">
+      <div class="k">3 &#183; Cure</div>
+      <h3>Walk away and let it dry.</h3>
+      <p>As the soil dries, the binder locks the density in. Rule of thumb in arid climates: 24 to 36 hours (site conditions govern). South Bend, Indiana: reclaimed one day, chip-sealed the next.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#3E3428"></i><i style="background:#A5825A"></i></span>What a job looks like</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Step</th><th>What you do</th></tr>
+    <tr><td class="yr">Before bid</td><td>Send a soil sample for lab mix design. The lab sets the dilution for your soil; that number governs the job, not a brochure.</td></tr>
+    <tr><td class="yr">Day 1</td><td>Rip or scarify the top 6 inches or so. Add concentrate to the water truck, recirculate 10 minutes, spray and blend to optimum moisture. Shape and crown.</td></tr>
+    <tr><td class="yr">Day 1</td><td>Compact: padfoot passes, then smooth drum, until density stops increasing.</td></tr>
+    <tr><td class="yr">Day 2+</td><td>Cure and cap (chip seal, asphalt, or leave as finished surface for haul roads and dust control). Water cleanup on all equipment.</td></tr>
+  </table>
+  </div>
+  <p class="intro" style="margin-top:14px;">Equipment list: reclaimer or recycler, 2,000 to 5,000 gal water truck with recirculation, 84&quot; padfoot, 84&quot; smooth drum, motor grader. Nothing you'd have to rent twice.</p>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#B7B0A2"></i><i style="background:#6B4A2B"></i></span>Why not just throw grid at it?</h2>
+  <p class="intro">Geogrids grab soil the way the plastic rings on a six-pack grab cans: at one layer, and nowhere else. They cannot flow into a void or tighten a loose pocket. A liquid reaches everywhere the soil's own moisture reaches, through the full depth you ripped. And unlike cement-treated base, the cured layer flexes instead of cracking: <strong>rigid things break, dense things last.</strong></p>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#3E3428"></i><i style="background:#6B4A2B"></i></span>Jobsite facts</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><td>Packaging</td><td>275-gallon totes (current standard) <span class="chip spec">Mfr. spec</span></td></tr>
+    <tr><td>Handling</td><td>Non-flammable, NFPA 1-0-0, not DOT regulated: no placards, no special hauling <span class="chip spec">Mfr. spec</span></td></tr>
+    <tr><td>Cleanup</td><td>Plain water, same day <span class="chip spec">Mfr. spec</span></td></tr>
+    <tr><td>Storage</td><td>Do not freeze; effective 50&#176;F to 140&#176;F; shelf life 1+ year <span class="chip spec">Mfr. spec</span></td></tr>
+    <tr><td>Track record</td><td>Prescott AZ roads placed 2007, still in service 2026 <span class="chip open">2026 recheck: documentation in progress</span></td></tr>
+  </table>
+  </div>
+  <div class="honesty">Straight talk: placement moisture matters. Lab records show mixes that missed spec when moisture ran high. Follow the mix design and blend to optimum moisture; that is the whole discipline.</div>
+</section>
+</div><!-- /door-con -->
+
+<div class="door" id="door-biz">
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#6B4A2B"></i><i style="background:#A5825A"></i></span>The most advanced soil densification technology on earth</h2>
+  <p class="intro">Our structural liquid turns native soil into road base built to be left alone. Every weak subgrade on every road project presents the same expensive choice: truck in thousands of tons of aggregate, or chemically alter the soil with lime or cement. In-Place BaseGrade is the third option, and it is the only one delivered as a liquid, which is why it densifies the entire soil mass instead of one plane or one chemistry-compatible soil type.</p>
+  <div class="steps">
+    <div class="step"><div class="k">Evidence base</div><h3>6 laboratories, 3 countries, 15 years</h3><p>Signed reports from accredited labs in the US, Peru, and Mexico, 2011 through 2025, catalogued in a SHA-256 indexed archive of 839 source documents.</p></div>
+    <div class="step"><div class="k">Field record</div><h3>19 years on the ground</h3><p>First roads placed in Prescott, AZ in 2007 remain in service in 2026. Applications documented across the US, Peru, Mexico, and China.</p></div>
+    <div class="step"><div class="k">Institutional traction</div><h3>BNSF, USAF, municipal DOTs</h3><p>A supervised BNSF Railway demonstration (2016), an engineered quotation for Nellis Air Force Base (2017), and a municipal field trial in Peru with accredited-lab verification.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#3E3428"></i><i style="background:#A5825A"></i></span>The evidence, condensed</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Claim</th><th>Proof</th><th>Status</th></tr>
+    <tr><td>Treatment roughly doubles soil bearing strength</td><td>CBR 68% &#8594; 98&#8211;125%, ISO 17025 lab, Peru 2017</td><td><span class="chip lab">Signed lab</span></td></tr>
+    <tr><td>Works with recycled asphalt to national spec</td><td>RAP hit Mexico's SCT hydraulic-base specification, 2016</td><td><span class="chip lab">Signed lab</span></td></tr>
+    <tr><td>Multiplies the effect of small cement doses</td><td>2&#8211;3&#215; the 21-day strength of cement alone, North Dakota 2011&#8211;12</td><td><span class="chip lab">Signed lab</span></td></tr>
+    <tr><td>Performs across soil types, sand to expansive clay</td><td>P.E.-signed certification after 10+ years of testing, 2019; independent 2025 series confirms on clays and sands</td><td><span class="chip lab">Signed P.E. letter</span></td></tr>
+    <tr><td>Long-life, low-intervention road base</td><td>Prescott 2007&#8211;2026; Peru same-road comparison (treated section unpatched, untreated section patched dozens of times)</td><td><span class="chip open">Documentation in progress</span></td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="strat" aria-hidden="true"><i style="background:#B7B0A2"></i><i style="background:#6B4A2B"></i></span>Honesty is the strategy</h2>
+  <p class="intro">This product sells into the most skeptical buying audience in construction: engineers and procurement officers. Our materials are built to survive their scrutiny. Every claim carries a verification badge and a source document; where our archive is unresolved, we publish the open question instead of the favorable number. We model savings through a calculator with explicit, adjustable assumptions rather than a headline percentage.</p>
+  <div class="honesty">What we are still verifying, in the open: field dosage rates (documents conflict), the structural layer coefficient basis for pavement design credit, and long-term lifecycle maintenance data. Diligence packets with source documents are available under NDA.</div>
+</section>
+</div><!-- /door-biz -->
+
+<footer>
+  <div style="font-family:Rockwell,'Roboto Slab',Georgia,serif;font-size:16px;color:var(--accent);margin-bottom:10px;">Disperse. Compact. Cure.</div>
+  <div>Original signed reports, MSDS, and datasheets available on request.</div>
+  <div class="mono" style="margin-top:8px;">Maintained from a SHA-256 indexed document archive · 839 source documents · last updated 2026-07-05</div>
+</footer>
+</div>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('nav.doors a');
+  var doors = { eng: document.getElementById('door-eng'),
+                con: document.getElementById('door-con'),
+                biz: document.getElementById('door-biz') };
+  links.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      links.forEach(function (x) { x.classList.remove('active'); });
+      a.classList.add('active');
+      Object.keys(doors).forEach(function (k) {
+        doors[k].classList.toggle('active', k === a.getAttribute('data-door'));
+      });
+      window.scrollTo(0, 0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
