@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The BNSF Railway demonstration — In-Place BaseGrade</title>
+<style>
+  :root{
+    --ground:#F6F4EF; --paper:#FFFFFF; --ink:#24211B; --ink-soft:#5C564B;
+    --line:#DAD5CA; --accent:#6B4A2B;
+    --lab:#2E6B4F; --spec:#33587A; --field:#96660F; --open:#8A857C;
+    --lab-bg:#EAF2ED; --spec-bg:#EAF0F6; --field-bg:#F6EFDE; --open-bg:#EFEDE8;
+    --bad:#9C3B32; --bad-bg:#F7EAE8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font:20px/1.65 "Segoe UI",-apple-system,"Helvetica Neue",Arial,sans-serif;}
+  h1,h2,h3{font-family:Rockwell,"Roboto Slab",Georgia,serif;line-height:1.2;text-wrap:balance;margin:0;}
+  a{color:var(--accent);}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px;}
+  .mono{font-family:Consolas,Menlo,monospace;}
+  header.page{padding:44px 0 30px;border-bottom:3px solid var(--ink);}
+  .eyebrow{font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 10px;}
+  header.page h1{font-size:clamp(34px,4.5vw,48px);}
+  header.page .sub{font-size:21px;color:var(--ink-soft);max-width:66ch;margin:16px 0 0;}
+  .chip{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 9px;border-radius:2px;white-space:nowrap;}
+  .chip.lab{color:var(--lab);background:var(--lab-bg);}
+  .chip.spec{color:var(--spec);background:var(--spec-bg);}
+  .chip.field{color:var(--field);background:var(--field-bg);}
+  .chip.open{color:var(--open);background:var(--open-bg);}
+  .meta{margin-top:14px;font-size:16.5px;color:var(--ink-soft);}
+  section{padding:36px 0 8px;}
+  .kicker{font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px;}
+  section h2{font-size:29px;margin-bottom:12px;}
+  section p{font-size:19px;color:var(--ink-soft);max-width:70ch;margin:0 0 14px;}
+  section p b, section p strong{color:var(--ink);}
+  .facts{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);padding:20px 24px;margin:18px 0;}
+  .facts ul{margin:0;padding-left:22px;font-size:18px;color:var(--ink-soft);}
+  .facts li{margin-bottom:10px;}
+  .facts li b{color:var(--ink);}
+  .tablewrap{overflow-x:auto;margin:14px 0;}
+  table.dt{width:100%;border-collapse:collapse;font-size:17px;background:var(--paper);border:1px solid var(--line);}
+  table.dt th{text-align:left;padding:10px 14px;border-bottom:2px solid var(--line);font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);background:var(--ground);}
+  table.dt td{padding:10px 14px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;vertical-align:top;}
+  table.dt tr:last-child td{border-bottom:none;}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin:20px 0;}
+  .gallery figure{margin:0;background:var(--paper);border:1px solid var(--line);padding:10px;}
+  .gallery a{display:block;}
+  .gallery img{width:100%;display:block;border:1px solid var(--line);cursor:zoom-in;}
+  .gallery figcaption{font-size:16px;color:var(--ink-soft);padding:10px 4px 2px;line-height:1.5;}
+  .gallery.wide{grid-template-columns:1fr 1fr;}
+  @media (max-width:700px){ .gallery, .gallery.wide{grid-template-columns:1fr;} }
+  .honesty{margin:30px 0;padding:20px 22px;background:#EFEBE2;border:1px solid #DDD5C4;font-size:18px;color:var(--ink-soft);}
+  .honesty b{color:var(--ink);}
+  .honesty ul{margin:8px 0 0;padding-left:22px;}
+  .honesty li{margin-bottom:8px;}
+  footer{padding:30px 0 52px;font-size:16.5px;color:var(--ink-soft);border-top:1px solid var(--line);margin-top:34px;}
+  .backbar{background:var(--paper);border-bottom:1px solid var(--line);}
+  .backbar .wrap{padding-top:12px;padding-bottom:12px;font-size:16px;}
+</style></head>
+<body>
+<div class="backbar"><div class="wrap"><a href="../../#cases" target="_top">&larr; All case studies</a></div></div>
+<header class="page"><div class="wrap">
+<div class="eyebrow">Case study &middot; Belen, New Mexico &middot; 2016&ndash;2017</div>
+<h1>The BNSF Railway demonstration</h1>
+<p class="sub">In September 2016, under the direction of BNSF Railway staff, a road segment at the Belen, New Mexico intermodal terminal was rebuilt with recycled asphalt product bound with the densifying liquid. Thirteen months later, after a record rain year, the vendor's follow-up inspection found the surface intact with no maintenance applied.</p>
+<div class="meta"><span class="chip field">Field record</span> &nbsp;<span class="chip spec">Vendor-reported</span> &nbsp; Source: Sta'bl Solutions presentation to BNSF Railway, December 11, 2017 (Cliff Suljak, CTO)</div>
+</div></header>
+<section><div class="wrap">
+<div class="kicker">What happened</div>
+<h2>A supervised demonstration at a working rail terminal</h2>
+<p>The engagement began at BNSF regional health-and-safety conferences, with demonstration negotiations through the summer of 2016. The installation itself ran in <b>September 2016</b> at the Belen Terminal: heavy equipment onsite, recycled asphalt product (RAP) sourced and shipped in, E-Rail Safety compliance, and the product MSDS reviewed and accepted by BNSF. The deck records numerous BNSF corporate visitors during installation, and that the BNSF team "accepted and acknowledged successful demonstration."</p>
+<div class="facts"><ul><li><b>Summer 2016</b>: guidance and demonstration negotiations with BNSF staff</li><li><b>September 2016</b>: road segment installed at Belen Terminal under BNSF direction, using imported RAP blended and compacted in place</li><li><b>MSDS accepted</b> by BNSF; E-Rail Safety compliance mandated and met</li><li>Vendor-classification paperwork was <b>submitted</b> after the demo &mdash; the record shows the process began, not that vendor status was granted</li></ul></div>
+<div class="gallery wide"><figure><a href="img/bnsf-p05.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p05.jpg" alt="September 2016: a smooth-drum roller compacts the treated road beside a BNSF intermodal train. The close-up shows the treated surface (dark, bound) against untreated ground (loose, tan)." decoding="async"></a><figcaption>September 2016: a smooth-drum roller compacts the treated road beside a BNSF intermodal train. The close-up shows the treated surface (dark, bound) against untreated ground (loose, tan).</figcaption></figure><figure><a href="img/bnsf-p10.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p10.jpg" alt="The compacted treated surface. The deck&#x27;s headline compaction claim is 98%; the number is stated without an attached test report." decoding="async"></a><figcaption>The compacted treated surface. The deck's headline compaction claim is 98%; the number is stated without an attached test report.</figcaption></figure><figure><a href="img/bnsf-p04.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p04.jpg" alt="The deck&#x27;s own timeline of the Belen engagement, as presented to BNSF in December 2017." decoding="async"></a><figcaption>The deck's own timeline of the Belen engagement, as presented to BNSF in December 2017.</figcaption></figure></div>
+</div></section>
+<section><div class="wrap">
+<div class="kicker">Thirteen months later</div>
+<h2>The October 2017 follow-up</h2>
+<p>In October 2017, after what the deck describes as a record rain year in the Albuquerque area, the vendor revisited the road. Standing water sat along the right edge: an existing spoil berm blocked drainage, the vendor asked to regrade it, and BNSF's site project manager declined. The surface itself is reported intact: <b>no additional maintenance applications over the treated area, and no deterioration of the surface noted</b> &mdash; with the ponding condition disclosed by the vendor's own report rather than hidden.</p>
+<div class="gallery wide"><figure><a href="img/bnsf-p06.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p06.jpg" alt="October 2017: the 2016 road segment, intact, with standing water along the right edge after record rains. The berm that blocked drainage predates the demonstration." decoding="async"></a><figcaption>October 2017: the 2016 road segment, intact, with standing water along the right edge after record rains. The berm that blocked drainage predates the demonstration.</figcaption></figure><figure><a href="img/bnsf-p07.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p07.jpg" alt="October 2017, view toward the BNSF tank farm. The vendor&#x27;s request to regrade the berm was declined; ponding persisted, and the report still notes no surface deterioration." decoding="async"></a><figcaption>October 2017, view toward the BNSF tank farm. The vendor's request to regrade the berm was declined; ponding persisted, and the report still notes no surface deterioration.</figcaption></figure></div>
+</div></section>
+<section><div class="wrap">
+<div class="kicker">The process</div>
+<h2>Sample, blend, compact, measure</h2>
+<p>The deck closes with the standard three-step process. The density-gauge photograph is the only hard measurement image in the deck: an InstroTek Xplorer nuclear density gauge reading <b>126.6 PCF dry density at 100.3% Proctor</b>, alongside the working rule that rolling stops when compaction numbers stop climbing. The deck presents this as process illustration; it does not explicitly tie that reading to the Belen segment.</p>
+<div class="gallery wide"><figure><a href="img/bnsf-p26.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p26.jpg" alt="Step 1: soil sampling and laboratory mix formulation. The two laboratory photographs on this page are illustrative stock images, not project photos." decoding="async"></a><figcaption>Step 1: soil sampling and laboratory mix formulation. The two laboratory photographs on this page are illustrative stock images, not project photos.</figcaption></figure><figure><a href="img/bnsf-p27.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p27.jpg" alt="Step 2: concentrate blended with water, applied, mixed by grader into the material, and compacted with a double vibratory roller." decoding="async"></a><figcaption>Step 2: concentrate blended with water, applied, mixed by grader into the material, and compacted with a double vibratory roller.</figcaption></figure><figure><a href="img/bnsf-p28.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p28.jpg" alt="Step 3: verification by nuclear density gauge — the display reads 126.6 PCF at 100.3% Proctor." decoding="async"></a><figcaption>Step 3: verification by nuclear density gauge — the display reads 126.6 PCF at 100.3% Proctor.</figcaption></figure><figure><a href="img/bnsf-p25.jpg" target="_blank" rel="noopener"><img src="img/bnsf-p25.jpg" alt="&quot;3MB as a solid&quot;: a sand sample cured into a self-supporting cylinder, from the same deck." decoding="async"></a><figcaption>"3MB as a solid": a sand sample cured into a self-supporting cylinder, from the same deck.</figcaption></figure></div>
+</div></section>
+<div class="wrap"><div class="honesty"><b>Read before citing this study.</b><ul><li><b>No vendor approval is on record.</b> The deck says the vendor-classification process "began" and documents were "submitted." BNSF should not be described as a customer or approving vendor.</li><li>The 2017 "no deterioration" finding is the <b>vendor's own observation</b>; no third-party inspection is on record.</li><li>The 98% compaction headline and the 3,000&nbsp;psi concrete-equivalent claim appear in the deck <b>without attached test reports</b>; the 126.6&nbsp;PCF / 100.3% gauge photo is presented as process illustration.</li><li>The deck's material estimate (0.75 gal/SY at 4&ndash;6" depth) is a <b>vendor planning figure</b> and feeds an open dosage question tracked in The Data; it is not a verified field consumption record.</li><li>Some deck pages use <b>illustrative stock photography</b>; the gallery above labels those where used.</li></ul></div></div>
+<footer><div class="wrap">Source: "Soil Stabilization Technology Presentation for BNSF Railway," Sta'bl Solutions, December 11, 2017 — pages reproduced as rendered from the original PDF. Part of the In-Place BaseGrade evidence series.</div></footer>
+</body>
+</html>

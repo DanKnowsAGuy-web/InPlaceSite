@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The rammed-earth block trial — In-Place BaseGrade</title>
+<style>
+  :root{
+    --ground:#F6F4EF; --paper:#FFFFFF; --ink:#24211B; --ink-soft:#5C564B;
+    --line:#DAD5CA; --accent:#6B4A2B;
+    --lab:#2E6B4F; --spec:#33587A; --field:#96660F; --open:#8A857C;
+    --lab-bg:#EAF2ED; --spec-bg:#EAF0F6; --field-bg:#F6EFDE; --open-bg:#EFEDE8;
+    --bad:#9C3B32; --bad-bg:#F7EAE8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font:20px/1.65 "Segoe UI",-apple-system,"Helvetica Neue",Arial,sans-serif;}
+  h1,h2,h3{font-family:Rockwell,"Roboto Slab",Georgia,serif;line-height:1.2;text-wrap:balance;margin:0;}
+  a{color:var(--accent);}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px;}
+  .mono{font-family:Consolas,Menlo,monospace;}
+  header.page{padding:44px 0 30px;border-bottom:3px solid var(--ink);}
+  .eyebrow{font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 10px;}
+  header.page h1{font-size:clamp(34px,4.5vw,48px);}
+  header.page .sub{font-size:21px;color:var(--ink-soft);max-width:66ch;margin:16px 0 0;}
+  .chip{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 9px;border-radius:2px;white-space:nowrap;}
+  .chip.lab{color:var(--lab);background:var(--lab-bg);}
+  .chip.spec{color:var(--spec);background:var(--spec-bg);}
+  .chip.field{color:var(--field);background:var(--field-bg);}
+  .chip.open{color:var(--open);background:var(--open-bg);}
+  .meta{margin-top:14px;font-size:16.5px;color:var(--ink-soft);}
+  section{padding:36px 0 8px;}
+  .kicker{font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px;}
+  section h2{font-size:29px;margin-bottom:12px;}
+  section p{font-size:19px;color:var(--ink-soft);max-width:70ch;margin:0 0 14px;}
+  section p b, section p strong{color:var(--ink);}
+  .facts{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);padding:20px 24px;margin:18px 0;}
+  .facts ul{margin:0;padding-left:22px;font-size:18px;color:var(--ink-soft);}
+  .facts li{margin-bottom:10px;}
+  .facts li b{color:var(--ink);}
+  .tablewrap{overflow-x:auto;margin:14px 0;}
+  table.dt{width:100%;border-collapse:collapse;font-size:17px;background:var(--paper);border:1px solid var(--line);}
+  table.dt th{text-align:left;padding:10px 14px;border-bottom:2px solid var(--line);font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);background:var(--ground);}
+  table.dt td{padding:10px 14px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;vertical-align:top;}
+  table.dt tr:last-child td{border-bottom:none;}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin:20px 0;}
+  .gallery figure{margin:0;background:var(--paper);border:1px solid var(--line);padding:10px;}
+  .gallery a{display:block;}
+  .gallery img{width:100%;display:block;border:1px solid var(--line);cursor:zoom-in;}
+  .gallery figcaption{font-size:16px;color:var(--ink-soft);padding:10px 4px 2px;line-height:1.5;}
+  .gallery.wide{grid-template-columns:1fr 1fr;}
+  @media (max-width:700px){ .gallery, .gallery.wide{grid-template-columns:1fr;} }
+  .honesty{margin:30px 0;padding:20px 22px;background:#EFEBE2;border:1px solid #DDD5C4;font-size:18px;color:var(--ink-soft);}
+  .honesty b{color:var(--ink);}
+  .honesty ul{margin:8px 0 0;padding-left:22px;}
+  .honesty li{margin-bottom:8px;}
+  footer{padding:30px 0 52px;font-size:16.5px;color:var(--ink-soft);border-top:1px solid var(--line);margin-top:34px;}
+  .backbar{background:var(--paper);border-bottom:1px solid var(--line);}
+  .backbar .wrap{padding-top:12px;padding-bottom:12px;font-size:16px;}
+</style></head>
+<body>
+<div class="backbar"><div class="wrap"><a href="../../#cases" target="_top">&larr; All case studies</a></div></div>
+<header class="page"><div class="wrap">
+<div class="eyebrow">Case study &middot; farm trial, New Mexico &middot; 2015</div>
+<h1>The rammed-earth block trial</h1>
+<p class="sub">A farm brick-making operation pressed compressed-earth blocks from its own clay and sand, bound with the product solution plus 3% Portland cement. A previous unstabilized batch had crumbled in the rain. The stabilized batch, twelve hours old, took three rainstorms and 2.5 inches of rain in two days and came through with sharp edges.</p>
+<div class="meta"><span class="chip field">Field record</span> &nbsp;<span class="chip open">Self-reported, no lab attached</span> &nbsp; Source: Energreen rammed-earth presentation (content dated June 30, 2015) and the original field write-up</div>
+</div></header>
+<section><div class="wrap">
+<div class="kicker">The before</div>
+<h2>What happens to unstabilized adobe</h2>
+<p>The trial exists because of a failure. A previous batch of unstabilized adobe blocks had been left out through three rainstorms, and the field write-up's own caption tells the result: <b>"Previous unstabilized Adobe after three rainstorms. No Bueno."</b></p>
+<div class="gallery wide"><figure><a href="img/adobe-p01.jpg" target="_blank" rel="noopener"><img src="img/adobe-p01.jpg" alt="The before: a previous batch of unstabilized adobe blocks, crumbled to rubble on the pallet after three rainstorms." decoding="async"></a><figcaption>The before: a previous batch of unstabilized adobe blocks, crumbled to rubble on the pallet after three rainstorms.</figcaption></figure></div>
+</div></section>
+<section><div class="wrap">
+<div class="kicker">The process, step by step</div>
+<h2>Native clay, farm sand, a block press</h2>
+<p>Everything came from the property: clay native to the farm (25&ndash;30% of the mix, from a deposit about four feet thick), sand and aggregate from the owner's own gravel pit, screened to 1/4". A mixing bay was improvised from salvaged highway sound-wall sections. The mix was wetted with the product solution to 28&ndash;34% moisture and pressed in an Adobe International compressed-earth-block machine rated at 300 bricks an hour &mdash; a 1,700&nbsp;sq&nbsp;ft house needs about 3,000 bricks.</p>
+<div class="facts"><ul><li>Clay 25&ndash;30% of mix, native to the farm; sand and aggregate from the on-site gravel pit</li><li>Material screened to 1/4" &mdash; the writer notes 1/8" screening would improve results (a first-run trial, tuning as it went)</li><li>Wetted with product solution to 28&ndash;34% moisture content</li><li><b>3% Portland cement by weight added</b> &mdash; this is what classifies the block as "stabilized" under New Mexico code</li><li>Adobe International block press, 300 bricks/hour</li></ul></div>
+<div class="gallery"><figure><a href="img/rammed-p03.jpg" target="_blank" rel="noopener"><img src="img/rammed-p03.jpg" alt="The mixing bay, built from salvaged highway sound-wall sections." decoding="async"></a><figcaption>The mixing bay, built from salvaged highway sound-wall sections.</figcaption></figure><figure><a href="img/rammed-p04.jpg" target="_blank" rel="noopener"><img src="img/rammed-p04.jpg" alt="Screening: loader with screening bucket over the native soil piles. Clay runs 25–30% of the mix." decoding="async"></a><figcaption>Screening: loader with screening bucket over the native soil piles. Clay runs 25–30% of the mix.</figcaption></figure><figure><a href="img/adobe-p03.jpg" target="_blank" rel="noopener"><img src="img/adobe-p03.jpg" alt="The product solution in its 275-gallon tote beside the soil piles; mix wetted to 28–34% moisture, with 3% Portland cement noted in the same caption." decoding="async"></a><figcaption>The product solution in its 275-gallon tote beside the soil piles; mix wetted to 28–34% moisture, with 3% Portland cement noted in the same caption.</figcaption></figure><figure><a href="img/rammed-p05.jpg" target="_blank" rel="noopener"><img src="img/rammed-p05.jpg" alt="Charging the mixing bay with a CAT TH62 telehandler." decoding="async"></a><figcaption>Charging the mixing bay with a CAT TH62 telehandler.</figcaption></figure><figure><a href="img/rammed-p06.jpg" target="_blank" rel="noopener"><img src="img/rammed-p06.jpg" alt="The Adobe International compressed-earth-block machine, rated 300 bricks per hour." decoding="async"></a><figcaption>The Adobe International compressed-earth-block machine, rated 300 bricks per hour.</figcaption></figure></div>
+</div></section>
+<section><div class="wrap">
+<div class="kicker">The after</div>
+<h2>Three rainstorms at twelve hours old</h2>
+<p>The stabilized blocks were twelve hours out of the press when the weather arrived: three rainstorms totaling <b>2.5 inches of rain in two days</b>. The blocks came through intact, edges sharp. Per the write-up, the standard 10" exterior block met the 30-day cure standard at <b>18 hours</b>, and the 8" interior block met the 30-day strength standard at 18 hours: <b>300&nbsp;psi</b>, surviving a drop from waist height without breaking.</p>
+<div class="gallery"><figure><a href="img/rammed-p07.jpg" target="_blank" rel="noopener"><img src="img/rammed-p07.jpg" alt="The after: stabilized blocks, intact with sharp edges, following 2.5 inches of rain in two days at twelve hours old." decoding="async"></a><figcaption>The after: stabilized blocks, intact with sharp edges, following 2.5 inches of rain in two days at twelve hours old.</figcaption></figure><figure><a href="img/rammed-p08.jpg" target="_blank" rel="noopener"><img src="img/rammed-p08.jpg" alt="Palleted 10&quot; exterior blocks — reported to meet the 30-day cure standard at 18 hours." decoding="async"></a><figcaption>Palleted 10" exterior blocks — reported to meet the 30-day cure standard at 18 hours.</figcaption></figure><figure><a href="img/rammed-p09.jpg" target="_blank" rel="noopener"><img src="img/rammed-p09.jpg" alt="The 8&quot; interior block — reported at 300 psi at 18 hours, surviving a waist-high drop test." decoding="async"></a><figcaption>The 8" interior block — reported at 300 psi at 18 hours, surviving a waist-high drop test.</figcaption></figure><figure><a href="img/rammed-p10.jpg" target="_blank" rel="noopener"><img src="img/rammed-p10.jpg" alt="The equipment that ran the trial: wheel loader with screening bucket and the TH62 telehandler." decoding="async"></a><figcaption>The equipment that ran the trial: wheel loader with screening bucket and the TH62 telehandler.</figcaption></figure></div>
+</div></section>
+<div class="wrap"><div class="honesty"><b>Read before citing this study.</b><ul><li><b>The blocks contained 3% Portland cement.</b> The product was not acting alone, and the cement is what qualifies the block as "stabilized" under New Mexico code. The polished marketing deck omits this; the original field write-up states it plainly, and so do we.</li><li>The cure and strength results ("30-day standard at 18 hours," "300 psi") are the <b>field writer's statements with no lab report attached</b>. 300 psi is approximately the New Mexico earthen-building code minimum &mdash; this is "meets code early," not an extraordinary strength number.</li><li>The failed unstabilized blocks were a <b>previous, separate batch</b>; rain totals for that batch were not recorded, so the before/after is directional rather than a controlled comparison.</li><li>Date note: the presentation content is stamped June 30, 2015; the file circulated under a 2017 name. The trial itself was most likely summer 2015.</li><li>The deck calls the product "3MB"; the field write-up calls it "Super PMB" &mdash; two legacy names for the same product line, consistent with its naming history.</li></ul></div></div>
+<footer><div class="wrap">Sources: Energreen International rammed-earth presentation (content dated June 30, 2015) and the original field write-up "Previous unstabilized Adobe after three rainstorms" — pages reproduced as rendered from the original PDFs. Part of the In-Place BaseGrade evidence series.</div></footer>
+</body>
+</html>
