@@ -309,5 +309,11 @@
   if (langSwitch) langSwitch.addEventListener('click', function () {
     state.lang = state.lang === 'en' ? 'es' : 'en'; applyTabs(true);
   });
+  window.addEventListener('message', function (e) {
+    if (!e.data || e.data.type !== 'inplace-lang') return;
+    var lang = e.data.lang === 'es' ? 'es' : 'en';
+    if (lang === state.lang) return;
+    state.lang = lang; applyTabs(false);
+  });
   applyTabs(false);
 })();

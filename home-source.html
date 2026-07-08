@@ -391,9 +391,14 @@
     if(now<anniv){years-=1;anniv=new Date(now.getFullYear()-1,4,31,12,0,0);}
     var ms=now-anniv;
     var d=Math.floor(ms/86400000),h=Math.floor(ms/3600000)%24,m=Math.floor(ms/60000)%60,s=Math.floor(ms/1000)%60;
-    el.textContent=years+' years, '+d+' days, '+pad(h)+':'+pad(m)+':'+pad(s)+' in service';
+    var t=pad(h)+':'+pad(m)+':'+pad(s);
+    var isEs=document.documentElement.lang==='es';
+    el.textContent=isEs
+      ? years+' años, '+d+' días, '+t+' en servicio'
+      : years+' years, '+d+' days, '+t+' in service';
   }
   tick();setInterval(tick,1000);
+  document.addEventListener('inplace-lang-changed',tick);
 })();
 </script>
 <script>
@@ -419,6 +424,7 @@
       if(enSpan) enSpan.classList.toggle('active', lang==='en');
       if(esSpan) esSpan.classList.toggle('active', lang==='es');
     });
+    document.dispatchEvent(new CustomEvent('inplace-lang-changed',{detail:{lang:lang}}));
   }
 
   function toggleLang(){
