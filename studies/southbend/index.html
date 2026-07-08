@@ -60,29 +60,71 @@
   footer{padding:30px 0 52px;font-size:16.5px;color:var(--ink-soft);border-top:1px solid var(--line);margin-top:34px;}
   .backbar{background:var(--paper);border-bottom:1px solid var(--line);}
   .backbar .wrap{padding-top:12px;padding-bottom:12px;font-size:16px;}
+  .langtoggle{display:inline-flex;align-items:center;border:1.5px solid var(--accent);border-radius:3px;overflow:hidden;padding:0;background:transparent;cursor:pointer;font-weight:700;font-size:14px;}
+  .langtoggle span{padding:5px 10px;color:var(--accent);}
+  .langtoggle span.active{background:var(--accent);color:#fff;}
 </style></head>
 <body>
-<div class="backbar"><div class="wrap"><a href="../../#cases" target="_top">&larr; All case studies</a></div></div>
+<div class="backbar"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;"><a href="../../#cases" target="_top" data-es="&larr; Todos los casos de estudio">&larr; All case studies</a><button type="button" class="langtoggle js-lang-toggle" aria-label="Switch language / Cambiar idioma"><span data-lang-btn="en">EN</span><span data-lang-btn="es">ES</span></button></div></div>
 <header class="page"><div class="wrap">
-<div class="eyebrow">Case study &middot; South Bend, Indiana &middot; 2013</div>
-<h1>South Bend, Indiana: one mile, reclaimed in place</h1>
-<p class="sub">A failed, alligatored asphalt road beside the rail tracks was ground up where it lay, re-bound with the product, and compacted back into service, one mile of full-depth reclamation, using the road's own material.</p>
-<div class="meta"><span class="chip field">Field record</span> &nbsp; Source: Energreen International master presentations, photo captions as printed</div>
+<div class="eyebrow" data-es="Caso de estudio &middot; South Bend, Indiana &middot; 2013">Case study &middot; South Bend, Indiana &middot; 2013</div>
+<h1 data-es="South Bend, Indiana: una milla, reciclada en el sitio">South Bend, Indiana: one mile, reclaimed in place</h1>
+<p class="sub" data-es="Una vialidad de asfalto deteriorada, con agrietamiento tipo piel de cocodrilo, junto a las vías del ferrocarril, fue fresada en el sitio, reintegrada con el producto y compactada de nuevo en servicio: una milla de reciclado a profundidad total, usando el propio material de la vialidad.">A failed, alligatored asphalt road beside the rail tracks was ground up where it lay, re-bound with the product, and compacted back into service, one mile of full-depth reclamation, using the road's own material.</p>
+<div class="meta" data-es="<span class=&quot;chip field&quot;>Registro de campo</span> &nbsp; Fuente: presentaciones maestras de Energreen International, pies de foto tal como fueron impresos"><span class="chip field">Field record</span> &nbsp; Source: Energreen International master presentations, photo captions as printed</div>
 </div></header>
 <section><div class="wrap">
-<div class="kicker">The project</div>
-<h2>Decayed asphalt to finished surface</h2>
-<p>The deck tells it in three frames: the decaying road in 2013, cracked through in the alligator pattern that signals base failure; a reclaiming machine run over <b>one mile</b> of the road with the product applied and remixed into the pulverized material; and the finished, re-compacted surface. This is the full-depth-reclamation use case in its purest form, the failed road itself becomes the aggregate for the new base.</p>
-<div class="facts"><ul><li><b>2013</b>, South Bend, Indiana, alongside railroad tracks</li><li>Failed asphalt, alligator cracking, a base problem, not a surface problem</li><li>Reclaimer pulverized the existing road; product applied and remixed in place; <b>one mile</b> treated</li><li>No hauling in, no hauling out: the old road is the raw material</li></ul></div>
-<div class="gallery wide"><figure><a href="img/before-full.jpg" target="_blank" rel="noopener"><img src="img/before-full.jpg" alt="Before: the decayed road, South Bend, 2013, alligator cracking through the full lane. Original photograph." decoding="async"></a><figcaption>Before: the decayed road, South Bend, 2013, alligator cracking through the full lane. Original photograph.</figcaption></figure><figure><a href="img/reclaimed-full.jpg" target="_blank" rel="noopener"><img src="img/reclaimed-full.jpg" alt="During: the road pulverized and remixed in place with the product. Original photograph." decoding="async"></a><figcaption>During: the road pulverized and remixed in place with the product. Original photograph.</figcaption></figure><figure><a href="img/finished-full.jpg" target="_blank" rel="noopener"><img src="img/finished-full.jpg" alt="After: the finished, chip-sealed surface. Original photograph." decoding="async"></a><figcaption>After: the finished, chip-sealed surface. Original photograph.</figcaption></figure><figure><a href="img/masteren-p52.jpg" target="_blank" rel="noopener"><img src="img/masteren-p52.jpg" alt="The three frames as the source deck presented them." decoding="async"></a><figcaption>The three frames as the source deck presented them.</figcaption></figure></div>
+<div class="kicker" data-es="El proyecto">The project</div>
+<h2 data-es="De asfalto deteriorado a superficie terminada">Decayed asphalt to finished surface</h2>
+<p data-es="El material muestra tres momentos: la vialidad en deterioro en 2013, agrietada en el patrón tipo piel de cocodrilo que indica falla de base; una recicladora recorriendo <b>una milla</b> de la vialidad con el producto aplicado y remezclado en el material pulverizado; y la superficie terminada y recompactada. Este es el caso de uso de reciclado a profundidad total en su forma más pura: la propia vialidad fallada se convierte en el agregado para la nueva base.">The deck tells it in three frames: the decaying road in 2013, cracked through in the alligator pattern that signals base failure; a reclaiming machine run over <b>one mile</b> of the road with the product applied and remixed into the pulverized material; and the finished, re-compacted surface. This is the full-depth-reclamation use case in its purest form, the failed road itself becomes the aggregate for the new base.</p>
+<div class="facts"><ul><li data-es="<b>2013</b>, South Bend, Indiana, junto a las vías del ferrocarril"><b>2013</b>, South Bend, Indiana, alongside railroad tracks</li><li data-es="Asfalto fallado, agrietamiento tipo piel de cocodrilo: un problema de base, no de superficie">Failed asphalt, alligator cracking, a base problem, not a surface problem</li><li data-es="La recicladora pulverizó la vialidad existente; el producto se aplicó y remezcló en el sitio; <b>una milla</b> tratada">Reclaimer pulverized the existing road; product applied and remixed in place; <b>one mile</b> treated</li><li data-es="Sin acarreo de entrada ni de salida: la vialidad antigua es la materia prima">No hauling in, no hauling out: the old road is the raw material</li></ul></div>
+<div class="gallery wide"><figure><a href="img/before-full.jpg" target="_blank" rel="noopener"><img src="img/before-full.jpg" alt="Before: the decayed road, South Bend, 2013, alligator cracking through the full lane. Original photograph." decoding="async"></a><figcaption data-es="Antes: la vialidad deteriorada, South Bend, 2013, agrietamiento tipo piel de cocodrilo en todo el carril. Fotografía original.">Before: the decayed road, South Bend, 2013, alligator cracking through the full lane. Original photograph.</figcaption></figure><figure><a href="img/reclaimed-full.jpg" target="_blank" rel="noopener"><img src="img/reclaimed-full.jpg" alt="During: the road pulverized and remixed in place with the product. Original photograph." decoding="async"></a><figcaption data-es="Durante: la vialidad pulverizada y remezclada en el sitio con el producto. Fotografía original.">During: the road pulverized and remixed in place with the product. Original photograph.</figcaption></figure><figure><a href="img/finished-full.jpg" target="_blank" rel="noopener"><img src="img/finished-full.jpg" alt="After: the finished, chip-sealed surface. Original photograph." decoding="async"></a><figcaption data-es="Después: la superficie terminada, con sello de riego (chip seal). Fotografía original.">After: the finished, chip-sealed surface. Original photograph.</figcaption></figure><figure><a href="img/masteren-p52.jpg" target="_blank" rel="noopener"><img src="img/masteren-p52.jpg" alt="The three frames as the source deck presented them." decoding="async"></a><figcaption data-es="Los tres momentos tal como se presentaron en la presentación original.">The three frames as the source deck presented them.</figcaption></figure></div>
 </div></section>
 <section><div class="wrap">
-<div class="kicker">Also in Indiana</div>
-<h2>Fort Wayne: a six-inch base course</h2>
-<p>One more Indiana frame survives in the record: a six-inch base course placed near Fort Wayne, by a rail and aggregate facility. A single photograph with its original caption, included for completeness, presented as exactly that.</p>
-<div class="gallery wide"><figure><a href="img/ftwayne-base.jpg" target="_blank" rel="noopener"><img src="img/ftwayne-base.jpg" alt="&quot;6-inch base course near Ft. Wayne, Indiana&quot;, caption as printed on the original photograph. No date or further record survives." decoding="async"></a><figcaption>"6-inch base course near Ft. Wayne, Indiana", caption as printed on the original photograph. No date or further record survives.</figcaption></figure></div>
+<div class="kicker" data-es="También en Indiana">Also in Indiana</div>
+<h2 data-es="Fort Wayne: una capa de base de seis pulgadas">Fort Wayne: a six-inch base course</h2>
+<p data-es="Del registro sobrevive un cuadro más de Indiana: una capa de base de seis pulgadas colocada cerca de Fort Wayne, junto a una instalación ferroviaria y de agregados. Una sola fotografía con su pie de foto original, incluida por completitud, presentada exactamente como tal.">One more Indiana frame survives in the record: a six-inch base course placed near Fort Wayne, by a rail and aggregate facility. A single photograph with its original caption, included for completeness, presented as exactly that.</p>
+<div class="gallery wide"><figure><a href="img/ftwayne-base.jpg" target="_blank" rel="noopener"><img src="img/ftwayne-base.jpg" alt="&quot;6-inch base course near Ft. Wayne, Indiana&quot;, caption as printed on the original photograph. No date or further record survives." decoding="async"></a><figcaption data-es="&quot;6-inch base course near Ft. Wayne, Indiana&quot; (capa de base de 6 pulgadas cerca de Ft. Wayne, Indiana), pie de foto tal como fue impreso en la fotografía original. No sobrevive fecha ni registro adicional.">"6-inch base course near Ft. Wayne, Indiana", caption as printed on the original photograph. No date or further record survives.</figcaption></figure></div>
 </div></section>
-<div class="wrap"><div class="honesty"><b>Read before citing this study.</b><ul><li>"One mile" is the only quantity in the record, the source gives <b>no width, tonnage, dosage, or QC data</b> for this job.</li><li>The Fort Wayne photograph is a <b>single frame with a caption and no other record</b>, no date, client, or quantities survive for that site.</li><li>The finished-surface photo shows a chip-type surface, but the source states no chip-seal timing and no completion date beyond 2013.</li><li>No performance follow-up for this road appears anywhere in the archive. An earlier vault note says it was "chip-sealed the following day", that detail comes from a separate summary document, not from these slides.</li></ul></div></div>
-<footer><div class="wrap">Sources: Energreen International master presentations, pages reproduced as rendered from the original PDFs. Part of the In-Place BaseGrade evidence series.</div></footer>
+<div class="wrap"><div class="honesty"><b data-es="Leer antes de citar este estudio.">Read before citing this study.</b><ul><li data-es="&quot;Una milla&quot; es la única cantidad que consta en el registro; la fuente no aporta <b>ancho, tonelaje, dosificación ni datos de control de calidad</b> para esta obra.">"One mile" is the only quantity in the record, the source gives <b>no width, tonnage, dosage, or QC data</b> for this job.</li><li data-es="La fotografía de Fort Wayne es <b>un solo cuadro con pie de foto y sin ningún otro registro</b>; no sobrevive fecha, cliente ni cantidades para ese sitio.">The Fort Wayne photograph is a <b>single frame with a caption and no other record</b>, no date, client, or quantities survive for that site.</li><li data-es="La foto de la superficie terminada muestra un acabado tipo sello de riego, pero la fuente no indica el momento del sello ni una fecha de terminación más allá de 2013.">The finished-surface photo shows a chip-type surface, but the source states no chip-seal timing and no completion date beyond 2013.</li><li data-es="No aparece en todo el archivo un seguimiento de desempeño para esta vialidad. Una nota anterior del archivo indica que se &quot;selló con riego al día siguiente&quot;; ese dato proviene de un documento de resumen distinto, no de estas diapositivas.">No performance follow-up for this road appears anywhere in the archive. An earlier vault note says it was "chip-sealed the following day", that detail comes from a separate summary document, not from these slides.</li></ul></div></div>
+<footer><div class="wrap" data-es="Fuentes: presentaciones maestras de Energreen International, páginas reproducidas tal como se renderizaron a partir de los PDF originales. Parte de la serie de evidencia de In-Place BaseGrade.">Sources: Energreen International master presentations, pages reproduced as rendered from the original PDFs. Part of the In-Place BaseGrade evidence series.</div></footer>
+<script>
+(function(){
+  var STORAGE_KEY='inplace-lang';
+  function applyLang(lang){
+    var nodes=document.querySelectorAll('[data-es]');
+    nodes.forEach(function(el){
+      if(!el.hasAttribute('data-en')){ el.setAttribute('data-en', el.innerHTML); }
+      el.innerHTML = lang==='es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
+    });
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.js-lang-toggle').forEach(function(btn){
+      var enSpan=btn.querySelector('[data-lang-btn="en"]');
+      var esSpan=btn.querySelector('[data-lang-btn="es"]');
+      if(enSpan) enSpan.classList.toggle('active', lang==='en');
+      if(esSpan) esSpan.classList.toggle('active', lang==='es');
+    });
+  }
+  function toggleLang(){
+    var current = document.documentElement.lang==='es' ? 'es' : 'en';
+    var next = current==='es' ? 'en' : 'es';
+    try{ localStorage.setItem(STORAGE_KEY, next); }catch(e){}
+    applyLang(next);
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var stored=null;
+    try{ stored=localStorage.getItem(STORAGE_KEY); }catch(e){}
+    applyLang(stored==='es'?'es':'en');
+    document.querySelectorAll('.js-lang-toggle').forEach(function(btn){
+      btn.addEventListener('click', toggleLang);
+    });
+  });
+  window.addEventListener('message', function(e){
+    if(!e.data || e.data.type!=='inplace-lang') return;
+    var lang = e.data.lang==='es' ? 'es' : 'en';
+    try{ localStorage.setItem(STORAGE_KEY, lang); }catch(err){}
+    applyLang(lang);
+  });
+})();
+</script>
 </body>
 </html>

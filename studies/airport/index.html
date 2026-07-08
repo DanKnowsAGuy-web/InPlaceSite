@@ -60,28 +60,70 @@
   footer{padding:30px 0 52px;font-size:16.5px;color:var(--ink-soft);border-top:1px solid var(--line);margin-top:34px;}
   .backbar{background:var(--paper);border-bottom:1px solid var(--line);}
   .backbar .wrap{padding-top:12px;padding-bottom:12px;font-size:16px;}
+  .langtoggle{display:inline-flex;align-items:center;border:1.5px solid var(--accent);border-radius:3px;overflow:hidden;padding:0;background:transparent;cursor:pointer;font-weight:700;font-size:14px;}
+  .langtoggle span{padding:5px 10px;color:var(--accent);}
+  .langtoggle span.active{background:var(--accent);color:#fff;}
 </style></head>
 <body>
-<div class="backbar"><div class="wrap"><a href="../../#cases" target="_top">&larr; All case studies</a></div></div>
+<div class="backbar"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;"><a href="../../#cases" target="_top" data-es="&larr; Todos los casos de estudio">&larr; All case studies</a><button type="button" class="langtoggle js-lang-toggle" aria-label="Switch language / Cambiar idioma"><span data-lang-btn="en">EN</span><span data-lang-btn="es">ES</span></button></div></div>
 <header class="page"><div class="wrap">
-<div class="eyebrow">Field documentation &middot; Cerro Colorado, Arequipa, Peru</div>
-<h1>Site investigation: the Arequipa airport corridor</h1>
-<p class="sub">A measured 315-meter section of unpaved frontage road beside the runway of Arequipa's airport, documented pit by pit: test excavations, sand-cone density testing, and soil sampling for a proposed paving section. This is the engineering groundwork that precedes a project, presented as exactly that.</p>
-<div class="meta"><span class="chip open">Site investigation only, no application documented</span> &nbsp; Source: SSPMB photographic panel (undated)</div>
+<div class="eyebrow" data-es="Documentación de campo &middot; Cerro Colorado, Arequipa, Perú">Field documentation &middot; Cerro Colorado, Arequipa, Peru</div>
+<h1 data-es="Investigación de sitio: el corredor aeroportuario de Arequipa">Site investigation: the Arequipa airport corridor</h1>
+<p class="sub" data-es="Un tramo medido de 315 metros de camino de acceso sin pavimentar junto a la pista del aeropuerto de Arequipa, documentado pozo por pozo: excavaciones de prueba, ensayos de densidad con cono de arena y muestreo de suelo para una sección de pavimento propuesta. Este es el trabajo de ingeniería previo que antecede a un proyecto, presentado exactamente como tal.">A measured 315-meter section of unpaved frontage road beside the runway of Arequipa's airport, documented pit by pit: test excavations, sand-cone density testing, and soil sampling for a proposed paving section. This is the engineering groundwork that precedes a project, presented as exactly that.</p>
+<div class="meta"><span class="chip open" data-es="Solo investigación de sitio, sin aplicación documentada">Site investigation only, no application documented</span> &nbsp; <span data-es="Fuente: panel fotográfico SSPMB (sin fecha)">Source: SSPMB photographic panel (undated)</span></div>
 </div></header>
 <section><div class="wrap">
-<div class="kicker">The site</div>
-<h2>315 meters beside the runway</h2>
-<p>The panel documents a proposed paving section on the Arequipa&ndash;Yura corridor (route 34A), running beside the airport runway near the A&ntilde;ashuayco bridge in the Cerro Colorado district, the same district as the completed municipal road in the Peru case study. The section was measured at <b>315.0 m long by 7.20 m wide</b>.</p>
-<div class="gallery wide"><figure><a href="img/airport-p01.jpg" target="_blank" rel="noopener"><img src="img/airport-p01.jpg" alt="Project location: the Arequipa–Yura corridor, Arequipa, Peru." decoding="async"></a><figcaption>Project location: the Arequipa–Yura corridor, Arequipa, Peru.</figcaption></figure><figure><a href="img/airport-p02.jpg" target="_blank" rel="noopener"><img src="img/airport-p02.jpg" alt="The proposed section beside the airport runway. The original panel mislabels the airport &quot;Jorge Chávez&quot; (Lima&#x27;s airport); Arequipa&#x27;s is Rodríguez Ballón International." decoding="async"></a><figcaption>The proposed section beside the airport runway. The original panel mislabels the airport "Jorge Chávez" (Lima's airport); Arequipa's is Rodríguez Ballón International.</figcaption></figure><figure><a href="img/airport-p03.jpg" target="_blank" rel="noopener"><img src="img/airport-p03.jpg" alt="The alignment measured at 315.0 m × 7.20 m, and soil sampling beginning beside live traffic." decoding="async"></a><figcaption>The alignment measured at 315.0 m × 7.20 m, and soil sampling beginning beside live traffic.</figcaption></figure></div>
+<div class="kicker" data-es="El sitio">The site</div>
+<h2 data-es="315 metros junto a la pista">315 meters beside the runway</h2>
+<p data-es="El panel documenta una sección de pavimento propuesta en el corredor Arequipa&ndash;Yura (ruta 34A), que corre junto a la pista del aeropuerto cerca del puente A&ntilde;ashuayco en el distrito de Cerro Colorado, el mismo distrito que la carretera municipal terminada del caso de estudio de Perú. El tramo fue medido en <b>315.0 m de largo por 7.20 m de ancho</b>.">The panel documents a proposed paving section on the Arequipa&ndash;Yura corridor (route 34A), running beside the airport runway near the A&ntilde;ashuayco bridge in the Cerro Colorado district, the same district as the completed municipal road in the Peru case study. The section was measured at <b>315.0 m long by 7.20 m wide</b>.</p>
+<div class="gallery wide"><figure><a href="img/airport-p01.jpg" target="_blank" rel="noopener"><img src="img/airport-p01.jpg" alt="Ubicación del proyecto: el corredor Arequipa–Yura, Arequipa, Perú." decoding="async"></a><figcaption data-es="Ubicación del proyecto: el corredor Arequipa–Yura, Arequipa, Perú.">Project location: the Arequipa–Yura corridor, Arequipa, Peru.</figcaption></figure><figure><a href="img/airport-p02.jpg" target="_blank" rel="noopener"><img src="img/airport-p02.jpg" alt="La sección propuesta junto a la pista del aeropuerto. El panel original identifica erróneamente el aeropuerto como &quot;Jorge Chávez&quot; (el de Lima); el de Arequipa es el Aeropuerto Internacional Rodríguez Ballón." decoding="async"></a><figcaption data-es="La sección propuesta junto a la pista del aeropuerto. El panel original identifica erróneamente el aeropuerto como &quot;Jorge Chávez&quot; (el de Lima); el de Arequipa es el Aeropuerto Internacional Rodríguez Ballón.">The proposed section beside the airport runway. The original panel mislabels the airport "Jorge Chávez" (Lima's airport); Arequipa's is Rodríguez Ballón International.</figcaption></figure><figure><a href="img/airport-p03.jpg" target="_blank" rel="noopener"><img src="img/airport-p03.jpg" alt="El trazo medido en 315.0 m × 7.20 m, y el muestreo de suelo comenzando junto al tráfico en vivo." decoding="async"></a><figcaption data-es="El trazo medido en 315.0 m × 7.20 m, y el muestreo de suelo comenzando junto al tráfico en vivo.">The alignment measured at 315.0 m × 7.20 m, and soil sampling beginning beside live traffic.</figcaption></figure></div>
 </div></section>
 <section><div class="wrap">
-<div class="kicker">The field work</div>
-<h2>Test pits and in-situ density</h2>
-<p>The crew dug test pits along the section and ran in-situ density tests with a sand-cone apparatus, the standard field method for measuring the density of the ground as it sits. Samples went off for soil study; this is the first step of the same lab-mix-design process documented in the Peru case study.</p>
-<div class="gallery wide"><figure><a href="img/airport-p04.jpg" target="_blank" rel="noopener"><img src="img/airport-p04.jpg" alt="Field density measurement in a test pit on the existing gravel surface." decoding="async"></a><figcaption>Field density measurement in a test pit on the existing gravel surface.</figcaption></figure><figure><a href="img/airport-p06.jpg" target="_blank" rel="noopener"><img src="img/airport-p06.jpg" alt="Looking west toward Yura at the Añashuayco bridge, the unpaved corridor as found." decoding="async"></a><figcaption>Looking west toward Yura at the Añashuayco bridge, the unpaved corridor as found.</figcaption></figure><figure><a href="img/airport-p09.jpg" target="_blank" rel="noopener"><img src="img/airport-p09.jpg" alt="The sand-cone density kit, sieves, cone funnel, base plate, and sample extraction underway." decoding="async"></a><figcaption>The sand-cone density kit, sieves, cone funnel, base plate, and sample extraction underway.</figcaption></figure></div>
+<div class="kicker" data-es="El trabajo de campo">The field work</div>
+<h2 data-es="Pozos de prueba y densidad in situ">Test pits and in-situ density</h2>
+<p data-es="El equipo excavó pozos de prueba a lo largo del tramo y realizó ensayos de densidad in situ con un aparato de cono de arena, el método de campo estándar para medir la densidad del terreno tal como se encuentra. Las muestras se enviaron para estudio de suelo; este es el primer paso del mismo proceso de diseño de mezcla en laboratorio documentado en el caso de estudio de Perú.">The crew dug test pits along the section and ran in-situ density tests with a sand-cone apparatus, the standard field method for measuring the density of the ground as it sits. Samples went off for soil study; this is the first step of the same lab-mix-design process documented in the Peru case study.</p>
+<div class="gallery wide"><figure><a href="img/airport-p04.jpg" target="_blank" rel="noopener"><img src="img/airport-p04.jpg" alt="Medición de densidad de campo en un pozo de prueba sobre la superficie de grava existente." decoding="async"></a><figcaption data-es="Medición de densidad de campo en un pozo de prueba sobre la superficie de grava existente.">Field density measurement in a test pit on the existing gravel surface.</figcaption></figure><figure><a href="img/airport-p06.jpg" target="_blank" rel="noopener"><img src="img/airport-p06.jpg" alt="Vista hacia el oeste, hacia Yura, en el puente Añashuayco, el corredor sin pavimentar tal como se encontró." decoding="async"></a><figcaption data-es="Vista hacia el oeste, hacia Yura, en el puente Añashuayco, el corredor sin pavimentar tal como se encontró.">Looking west toward Yura at the Añashuayco bridge, the unpaved corridor as found.</figcaption></figure><figure><a href="img/airport-p09.jpg" target="_blank" rel="noopener"><img src="img/airport-p09.jpg" alt="El kit de densidad de cono de arena, tamices, embudo cónico, placa base y extracción de muestra en curso." decoding="async"></a><figcaption data-es="El kit de densidad de cono de arena, tamices, embudo cónico, placa base y extracción de muestra en curso.">The sand-cone density kit, sieves, cone funnel, base plate, and sample extraction underway.</figcaption></figure></div>
 </div></section>
-<div class="wrap"><div class="honesty"><b>Read before citing this document.</b><ul><li><b>This is pre-work documentation only.</b> The panel shows site investigation for a <i>proposed</i> section; no mixing, application, compaction, or finished surface appears in it, and no evidence in the archive shows the paving was executed.</li><li>The panel is <b>undated</b>, and it mislabels the airport ("Jorge Ch&aacute;vez" is Lima; Arequipa's airport is Rodr&iacute;guez Ball&oacute;n). The mapped location itself is unambiguous.</li><li>It is included because it documents the real front end of the process, sampling and in-situ testing before any product decision, not as evidence of a completed project.</li></ul></div></div>
-<footer><div class="wrap">Source: "PHOTOGRAPHIC PANEL SSPMB" (undated), pages reproduced as rendered from the original PDF. Part of the In-Place BaseGrade evidence series.</div></footer>
+<div class="wrap"><div class="honesty"><b data-es="Lea esto antes de citar este documento.">Read before citing this document.</b><ul><li data-es="<b>Esto es solo documentación de trabajo previo.</b> El panel muestra la investigación de sitio para una sección <i>propuesta</i>; no aparece mezcla, aplicación, compactación ni superficie terminada, y ninguna evidencia en el archivo muestra que el pavimento se haya ejecutado."><b>This is pre-work documentation only.</b> The panel shows site investigation for a <i>proposed</i> section; no mixing, application, compaction, or finished surface appears in it, and no evidence in the archive shows the paving was executed.</li><li data-es="El panel <b>no tiene fecha</b>, y identifica erróneamente el aeropuerto (&quot;Jorge Ch&aacute;vez&quot; es el de Lima; el de Arequipa es Rodr&iacute;guez Ball&oacute;n). La ubicación mapeada en sí no es ambigua.">The panel is <b>undated</b>, and it mislabels the airport ("Jorge Ch&aacute;vez" is Lima; Arequipa's airport is Rodr&iacute;guez Ball&oacute;n). The mapped location itself is unambiguous.</li><li data-es="Se incluye porque documenta el verdadero punto de partida del proceso, muestreo y ensayos in situ antes de cualquier decisión de producto, no como evidencia de un proyecto terminado.">It is included because it documents the real front end of the process, sampling and in-situ testing before any product decision, not as evidence of a completed project.</li></ul></div></div>
+<footer><div class="wrap" data-es="Fuente: &quot;PANEL FOTOGRÁFICO SSPMB&quot; (sin fecha), páginas reproducidas tal como se representan del PDF original. Parte de la serie de evidencia de In-Place BaseGrade.">Source: "PHOTOGRAPHIC PANEL SSPMB" (undated), pages reproduced as rendered from the original PDF. Part of the In-Place BaseGrade evidence series.</div></footer>
+<script>
+(function(){
+  var STORAGE_KEY='inplace-lang';
+  function applyLang(lang){
+    var nodes=document.querySelectorAll('[data-es]');
+    nodes.forEach(function(el){
+      if(!el.hasAttribute('data-en')){ el.setAttribute('data-en', el.innerHTML); }
+      el.innerHTML = lang==='es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
+    });
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.js-lang-toggle').forEach(function(btn){
+      var enSpan=btn.querySelector('[data-lang-btn="en"]');
+      var esSpan=btn.querySelector('[data-lang-btn="es"]');
+      if(enSpan) enSpan.classList.toggle('active', lang==='en');
+      if(esSpan) esSpan.classList.toggle('active', lang==='es');
+    });
+  }
+  function toggleLang(){
+    var current = document.documentElement.lang==='es' ? 'es' : 'en';
+    var next = current==='es' ? 'en' : 'es';
+    try{ localStorage.setItem(STORAGE_KEY, next); }catch(e){}
+    applyLang(next);
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var stored=null;
+    try{ stored=localStorage.getItem(STORAGE_KEY); }catch(e){}
+    applyLang(stored==='es'?'es':'en');
+    document.querySelectorAll('.js-lang-toggle').forEach(function(btn){
+      btn.addEventListener('click', toggleLang);
+    });
+  });
+  window.addEventListener('message', function(e){
+    if(!e.data || e.data.type!=='inplace-lang') return;
+    var lang = e.data.lang==='es' ? 'es' : 'en';
+    try{ localStorage.setItem(STORAGE_KEY, lang); }catch(err){}
+    applyLang(lang);
+  });
+})();
+</script>
 </body>
 </html>

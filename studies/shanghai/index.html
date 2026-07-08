@@ -60,24 +60,66 @@
   footer{padding:30px 0 52px;font-size:16.5px;color:var(--ink-soft);border-top:1px solid var(--line);margin-top:34px;}
   .backbar{background:var(--paper);border-bottom:1px solid var(--line);}
   .backbar .wrap{padding-top:12px;padding-bottom:12px;font-size:16px;}
+  .langtoggle{display:inline-flex;align-items:center;border:1.5px solid var(--accent);border-radius:3px;overflow:hidden;padding:0;background:transparent;cursor:pointer;font-weight:700;font-size:14px;}
+  .langtoggle span{padding:5px 10px;color:var(--accent);}
+  .langtoggle span.active{background:var(--accent);color:#fff;}
 </style></head>
 <body>
-<div class="backbar"><div class="wrap"><a href="../../#cases" target="_top">&larr; All case studies</a></div></div>
+<div class="backbar"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;"><a href="../../#cases" target="_top" data-es="&larr; Todos los casos de estudio">&larr; All case studies</a><button type="button" class="langtoggle js-lang-toggle" aria-label="Switch language / Cambiar idioma"><span data-lang-btn="en">EN</span><span data-lang-btn="es">ES</span></button></div></div>
 <header class="page"><div class="wrap">
-<div class="eyebrow">Case study &middot; outside Shanghai, China &middot; 2012</div>
-<h1>Shanghai, China: the 2012 base-stabilization engagement</h1>
-<p class="sub">A street base outside Shanghai, graded and stabilized with the product and cement in 2012, with a written demonstration specification prepared for the City of Shanghai. The record shows the base work and the spec; it does not show a finished street, and this page says so.</p>
-<div class="meta"><span class="chip field">Field record</span> &nbsp;<span class="chip open">Outcome undocumented</span> &nbsp; Sources: SSPMB photo deck; City of Shanghai PMB Road Renewal Demo specification</div>
+<div class="eyebrow" data-es="Caso de estudio &middot; a las afueras de Shanghai, China &middot; 2012">Case study &middot; outside Shanghai, China &middot; 2012</div>
+<h1 data-es="Shanghai, China: el proyecto de estabilizaci&oacute;n de base de 2012">Shanghai, China: the 2012 base-stabilization engagement</h1>
+<p class="sub" data-es="Una base de calle a las afueras de Shanghai, nivelada y estabilizada con el producto y cemento en 2012, con una especificaci&oacute;n de demostraci&oacute;n escrita preparada para la Ciudad de Shanghai. El registro muestra el trabajo de base y la especificaci&oacute;n; no muestra una calle terminada, y esta p&aacute;gina lo dice claramente.">A street base outside Shanghai, graded and stabilized with the product and cement in 2012, with a written demonstration specification prepared for the City of Shanghai. The record shows the base work and the spec; it does not show a finished street, and this page says so.</p>
+<div class="meta" data-es="<span class=&quot;chip field&quot;>Registro de campo</span> &nbsp;<span class=&quot;chip open&quot;>Resultado sin documentar</span> &nbsp; Fuentes: presentaci&oacute;n fotogr&aacute;fica de SSPMB; especificaci&oacute;n City of Shanghai PMB Road Renewal Demo"><span class="chip field">Field record</span> &nbsp;<span class="chip open">Outcome undocumented</span> &nbsp; Sources: SSPMB photo deck; City of Shanghai PMB Road Renewal Demo specification</div>
 </div></header>
 <section><div class="wrap">
-<div class="kicker">What the record shows</div>
-<h2>A graded street and a written spec</h2>
-<p>The photo record is two frames from 2012: a delegation inspecting the graded, unpaved street base, and the full stabilized base running through a tree-lined commercial street, captioned in the source deck as <b>"Base Stabilization outside Shanghai, China 2012"</b> and <b>"China street base in conjunction with SSPMB and cement."</b></p>
-<p>Alongside the photos, a demonstration work specification survives, written for the <b>City of Shanghai PMB Road Renewal Demo</b>: pulverize the existing base to a minimum 5 inches, apply PMB at <b>0.65 gal/SY</b> at 4:1 water dilution to 5&ndash;8% optimum moisture, surface with emulsion coats and a hot-mix wear course, Wirtgen 2400 / Cat RM300-class recycler, minimum 50&deg;F, four-hour traffic closure.</p>
-<div class="facts"><ul><li><b>2012</b>, street base outside Shanghai; product used together with cement</li><li>Demo spec: pulverize to 5" minimum; <b>0.65 gal/SY</b> PMB; water:PMB 4:1; emulsion + HMA wear course</li><li>Spec's dosage math: 0.65 gal/SY over 5" &asymp; <b>0.13 gal/SY per inch</b>, consistent with the field-derived figure tracked in the dosage question</li></ul></div>
-<div class="gallery wide"><figure><a href="img/inspection.jpg" target="_blank" rel="noopener"><img src="img/inspection.jpg" alt="The delegation inspects the graded street base, 2012, the source deck&#x27;s caption: &quot;Base Stabilization outside Shanghai, China.&quot;" decoding="async"></a><figcaption>The delegation inspects the graded street base, 2012, the source deck's caption: "Base Stabilization outside Shanghai, China."</figcaption></figure><figure><a href="img/graded-street.jpg" target="_blank" rel="noopener"><img src="img/graded-street.jpg" alt="The stabilized base running the length of the street. No finished/paved photo exists in the record." decoding="async"></a><figcaption>The stabilized base running the length of the street. No finished/paved photo exists in the record.</figcaption></figure></div>
+<div class="kicker" data-es="Lo que muestra el registro">What the record shows</div>
+<h2 data-es="Una calle nivelada y una especificaci&oacute;n escrita">A graded street and a written spec</h2>
+<p data-es="El registro fotogr&aacute;fico son dos tomas de 2012: una delegaci&oacute;n inspeccionando la base de calle nivelada y sin pavimentar, y la base estabilizada completa a lo largo de una calle comercial arbolada, con la leyenda en la presentaci&oacute;n original de <b>&quot;Base Stabilization outside Shanghai, China 2012&quot;</b> y <b>&quot;China street base in conjunction with SSPMB and cement.&quot;</b>">The photo record is two frames from 2012: a delegation inspecting the graded, unpaved street base, and the full stabilized base running through a tree-lined commercial street, captioned in the source deck as <b>"Base Stabilization outside Shanghai, China 2012"</b> and <b>"China street base in conjunction with SSPMB and cement."</b></p>
+<p data-es="Junto con las fotos, se conserva una especificaci&oacute;n de trabajo de demostraci&oacute;n, escrita para el <b>City of Shanghai PMB Road Renewal Demo</b>: pulverizar la base existente a un m&iacute;nimo de 5 pulgadas, aplicar PMB a <b>0.65 gal/SY</b> con una dilusi&oacute;n de agua 4:1 hasta 5&ndash;8% de humedad &oacute;ptima, superficie con capas de emulsi&oacute;n y una capa de rodadura de mezcla en caliente, recicladora tipo Wirtgen 2400 / Cat RM300, m&iacute;nimo 50&deg;F, cierre al tr&aacute;fico de cuatro horas.">Alongside the photos, a demonstration work specification survives, written for the <b>City of Shanghai PMB Road Renewal Demo</b>: pulverize the existing base to a minimum 5 inches, apply PMB at <b>0.65 gal/SY</b> at 4:1 water dilution to 5&ndash;8% optimum moisture, surface with emulsion coats and a hot-mix wear course, Wirtgen 2400 / Cat RM300-class recycler, minimum 50&deg;F, four-hour traffic closure.</p>
+<div class="facts"><ul><li data-es="<b>2012</b>, base de calle a las afueras de Shanghai; producto usado junto con cemento"><b>2012</b>, street base outside Shanghai; product used together with cement</li><li data-es="Especificaci&oacute;n de demostraci&oacute;n: pulverizar a 5&quot; m&iacute;nimo; <b>0.65 gal/SY</b> de PMB; agua:PMB 4:1; emulsi&oacute;n + capa de rodadura HMA">Demo spec: pulverize to 5" minimum; <b>0.65 gal/SY</b> PMB; water:PMB 4:1; emulsion + HMA wear course</li><li data-es="Matem&aacute;tica de dosificaci&oacute;n de la especificaci&oacute;n: 0.65 gal/SY sobre 5&quot; &asymp; <b>0.13 gal/SY por pulgada</b>, coherente con la cifra derivada de campo que se sigue en la pregunta de dosificaci&oacute;n">Spec's dosage math: 0.65 gal/SY over 5" &asymp; <b>0.13 gal/SY per inch</b>, consistent with the field-derived figure tracked in the dosage question</li></ul></div>
+<div class="gallery wide"><figure><a href="img/inspection.jpg" target="_blank" rel="noopener"><img src="img/inspection.jpg" alt="The delegation inspects the graded street base, 2012, the source deck&#x27;s caption: &quot;Base Stabilization outside Shanghai, China.&quot;" decoding="async"></a><figcaption data-es="La delegaci&oacute;n inspecciona la base de calle nivelada, 2012, la leyenda de la presentaci&oacute;n original: &quot;Base Stabilization outside Shanghai, China.&quot;">The delegation inspects the graded street base, 2012, the source deck's caption: "Base Stabilization outside Shanghai, China."</figcaption></figure><figure><a href="img/graded-street.jpg" target="_blank" rel="noopener"><img src="img/graded-street.jpg" alt="The stabilized base running the length of the street. No finished/paved photo exists in the record." decoding="async"></a><figcaption data-es="La base estabilizada a lo largo de toda la calle. No existe en el registro ninguna foto de la calle terminada/pavimentada.">The stabilized base running the length of the street. No finished/paved photo exists in the record.</figcaption></figure></div>
 </div></section>
-<div class="wrap"><div class="honesty"><b>Read before citing this study.</b><ul><li><b>No finished-street photo exists anywhere in the archive</b>, both photographs show graded base, not a completed pavement. A later deck re-captioned these same photos "Street Paving in Shanghai"; the honest caption is base stabilization.</li><li>The City of Shanghai demo specification is a <b>proposal/scope document</b>: no client signature, no built quantities, no test results, and no confirmation the demo proceeded is on record.</li><li>No Chinese client, district, or counterpart is named anywhere in the record. Whether the demo was built is on the manufacturer question list.</li><li>The base was stabilized with the product <b>and cement</b> together, the same attribution caveat as the Nicaragua and rammed-earth records.</li></ul></div></div>
-<footer><div class="wrap">Sources: SSPMB presentation deck (photo captions as printed) and the "City of Shanghai PMB Road Renewal Demo" work specification. Part of the In-Place BaseGrade evidence series.</div></footer>
+<div class="wrap"><div class="honesty"><b data-es="Lea esto antes de citar este estudio.">Read before citing this study.</b><ul><li data-es="<b>No existe ninguna foto de la calle terminada en todo el archivo</b>, ambas fotograf&iacute;as muestran la base nivelada, no un pavimento completado. Una presentaci&oacute;n posterior volvi&oacute; a titular estas mismas fotos como &quot;Street Paving in Shanghai&quot;; la leyenda honesta es estabilizaci&oacute;n de base."><b>No finished-street photo exists anywhere in the archive</b>, both photographs show graded base, not a completed pavement. A later deck re-captioned these same photos "Street Paving in Shanghai"; the honest caption is base stabilization.</li><li data-es="La especificaci&oacute;n de demostraci&oacute;n de la Ciudad de Shanghai es un <b>documento de propuesta/alcance</b>: no hay firma del cliente, no hay cantidades construidas, no hay resultados de pruebas, y no consta confirmaci&oacute;n de que la demostraci&oacute;n se haya realizado.">The City of Shanghai demo specification is a <b>proposal/scope document</b>: no client signature, no built quantities, no test results, and no confirmation the demo proceeded is on record.</li><li data-es="Ning&uacute;n cliente, distrito o contraparte china se menciona en ning&uacute;n lugar del registro. Si la demostraci&oacute;n se construy&oacute; o no est&aacute; en la lista de preguntas al fabricante.">No Chinese client, district, or counterpart is named anywhere in the record. Whether the demo was built is on the manufacturer question list.</li><li data-es="La base se estabiliz&oacute; con el producto <b>y cemento</b> juntos, la misma advertencia de atribuci&oacute;n que en los registros de Nicaragua y tierra apisonada.">The base was stabilized with the product <b>and cement</b> together, the same attribution caveat as the Nicaragua and rammed-earth records.</li></ul></div></div>
+<footer><div class="wrap" data-es="Fuentes: presentaci&oacute;n de SSPMB (leyendas fotogr&aacute;ficas seg&uacute;n impresas) y la especificaci&oacute;n de trabajo &quot;City of Shanghai PMB Road Renewal Demo&quot;. Parte de la serie de evidencia In-Place BaseGrade.">Sources: SSPMB presentation deck (photo captions as printed) and the "City of Shanghai PMB Road Renewal Demo" work specification. Part of the In-Place BaseGrade evidence series.</div></footer>
+<script>
+(function(){
+  var STORAGE_KEY='inplace-lang';
+  function applyLang(lang){
+    var nodes=document.querySelectorAll('[data-es]');
+    nodes.forEach(function(el){
+      if(!el.hasAttribute('data-en')){ el.setAttribute('data-en', el.innerHTML); }
+      el.innerHTML = lang==='es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
+    });
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.js-lang-toggle').forEach(function(btn){
+      var enSpan=btn.querySelector('[data-lang-btn="en"]');
+      var esSpan=btn.querySelector('[data-lang-btn="es"]');
+      if(enSpan) enSpan.classList.toggle('active', lang==='en');
+      if(esSpan) esSpan.classList.toggle('active', lang==='es');
+    });
+  }
+  function toggleLang(){
+    var current = document.documentElement.lang==='es' ? 'es' : 'en';
+    var next = current==='es' ? 'en' : 'es';
+    try{ localStorage.setItem(STORAGE_KEY, next); }catch(e){}
+    applyLang(next);
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var stored=null;
+    try{ stored=localStorage.getItem(STORAGE_KEY); }catch(e){}
+    applyLang(stored==='es'?'es':'en');
+    document.querySelectorAll('.js-lang-toggle').forEach(function(btn){
+      btn.addEventListener('click', toggleLang);
+    });
+  });
+  window.addEventListener('message', function(e){
+    if(!e.data || e.data.type!=='inplace-lang') return;
+    var lang = e.data.lang==='es' ? 'es' : 'en';
+    try{ localStorage.setItem(STORAGE_KEY, lang); }catch(err){}
+    applyLang(lang);
+  });
+})();
+</script>
 </body>
 </html>

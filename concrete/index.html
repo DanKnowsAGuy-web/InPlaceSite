@@ -5,6 +5,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Barlow:opsz,wght@6..14,300;6..14,400;6..14,500;6..14,600&family=Barlow+Condensed:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css?v=6">
+<style>
+  .langtoggle{display:inline-flex;align-items:center;border:1.5px solid var(--accent);border-radius:3px;overflow:hidden;padding:0;background:transparent;cursor:pointer;font-weight:700;font-size:14px;}
+  .langtoggle span{padding:5px 10px;color:var(--accent);}
+  .langtoggle span.active{background:var(--accent);color:#fff;}
+</style>
 </head><body>
 <section class="summary-hero cover"><div class="cover-diagonal"></div><div class="cover-inner">
 <div class="cover-wordmark">IN-PLACE BASEGRADE<span>Your Groundwork Strategist</span></div>
@@ -147,4 +152,18 @@
       <p class="lead" style="margin-top:8px;">In-Place BaseGrade elevó la resistencia estructural con una dosis de una parte en mil, sobre el mismo cemento, cubos y prensa usados para el control. Los resultados completos, la metodología, cada tabla, todos los gráficos y las dos presentaciones de congreso están en la pestaña de Informe Completo.</p>
     </div></section></div></main>
 <script src="assets/js/app.js?v=5"></script>
+<script>
+(function(){
+  window.addEventListener('message', function(e){
+    if(!e.data || e.data.type!=='inplace-lang') return;
+    var lang = e.data.lang==='es' ? 'es' : 'en';
+    var activePanel = document.querySelector('.tab-panel.active');
+    var current = (activePanel && /^es/.test(activePanel.id)) ? 'es' : 'en';
+    if(current!==lang){
+      var langSwitch = document.querySelector('.lang-switch');
+      if(langSwitch) langSwitch.click();
+    }
+  });
+})();
+</script>
 </body></html>

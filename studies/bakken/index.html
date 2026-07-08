@@ -60,28 +60,70 @@
   footer{padding:30px 0 52px;font-size:16.5px;color:var(--ink-soft);border-top:1px solid var(--line);margin-top:34px;}
   .backbar{background:var(--paper);border-bottom:1px solid var(--line);}
   .backbar .wrap{padding-top:12px;padding-bottom:12px;font-size:16px;}
+  .langtoggle{display:inline-flex;align-items:center;border:1.5px solid var(--accent);border-radius:3px;overflow:hidden;padding:0;background:transparent;cursor:pointer;font-weight:700;font-size:14px;}
+  .langtoggle span{padding:5px 10px;color:var(--accent);}
+  .langtoggle span.active{background:var(--accent);color:#fff;}
 </style></head>
 <body>
-<div class="backbar"><div class="wrap"><a href="../../#cases" target="_top">&larr; All case studies</a></div></div>
+<div class="backbar"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;"><a href="../../#cases" target="_top" data-es="&larr; Todos los casos de estudio">&larr; All case studies</a><button type="button" class="langtoggle js-lang-toggle" aria-label="Switch language / Cambiar idioma"><span data-lang-btn="en">EN</span><span data-lang-btn="es">ES</span></button></div></div>
 <header class="page"><div class="wrap">
-<div class="eyebrow">Design campaign &middot; Williston, North Dakota &middot; 2011&ndash;2012</div>
-<h1>The Bakken: a mix design for Hess oil pads</h1>
-<p class="sub">Winter 2011: samples from oil-well site pads near Williston went to an AASHTO-accredited lab, and a complete mix design came back showing the product and cement together reached two to three times the strength of cement alone. The pads were never built with it, Hess went with wooden rig matting on schedule pressure, and this page presents it as what it is: a lab-validated design with the field photos of the ground it was designed for.</p>
-<div class="meta"><span class="chip lab">Signed lab campaign</span> &nbsp;<span class="chip open">Never constructed</span> &nbsp; Sources: GTS Lab Log 11-0464/11-0465 (Nov 2011&ndash;May 2012); SSPMB deck, Bakken slides</div>
+<div class="eyebrow" data-es="Campaña de diseño &middot; Williston, Dakota del Norte &middot; 2011&ndash;2012">Design campaign &middot; Williston, North Dakota &middot; 2011&ndash;2012</div>
+<h1 data-es="El Bakken: un diseño de mezcla para las plataformas petroleras de Hess">The Bakken: a mix design for Hess oil pads</h1>
+<p class="sub" data-es="Invierno de 2011: se enviaron muestras de las plataformas de pozos petroleros cerca de Williston a un laboratorio acreditado por AASHTO, y se obtuvo un diseño de mezcla completo que mostraba que el producto junto con el cemento alcanzaba de dos a tres veces la resistencia del cemento solo. Las plataformas nunca se construyeron con él: Hess optó por entablado de madera para la plataforma de perforación debido a la presión del cronograma, y esta página lo presenta tal como es: un diseño validado en laboratorio con las fotos de campo del terreno para el que fue diseñado.">Winter 2011: samples from oil-well site pads near Williston went to an AASHTO-accredited lab, and a complete mix design came back showing the product and cement together reached two to three times the strength of cement alone. The pads were never built with it, Hess went with wooden rig matting on schedule pressure, and this page presents it as what it is: a lab-validated design with the field photos of the ground it was designed for.</p>
+<div class="meta" data-es="<span class=&quot;chip lab&quot;>Campaña de laboratorio firmada</span> &nbsp;<span class=&quot;chip open&quot;>Nunca construido</span> &nbsp; Fuentes: GTS Lab Log 11-0464/11-0465 (nov. 2011&ndash;mayo 2012); presentación SSPMB, diapositivas de Bakken"><span class="chip lab">Signed lab campaign</span> &nbsp;<span class="chip open">Never constructed</span> &nbsp; Sources: GTS Lab Log 11-0464/11-0465 (Nov 2011&ndash;May 2012); SSPMB deck, Bakken slides</div>
 </div></header>
 <section><div class="wrap">
-<div class="kicker">The problem</div>
-<h2>Scoria pads in Bakken weather</h2>
-<p>Bakken drilling pads sit on scoria, the red, burned clay-rock of western North Dakota, over heavy native clays, worked year-round through freeze-thaw and a long rainy season. In November 2011, samples of the in-place clays and imported Type 5 aggregate were pulled from well-site pads near Williston (sampled 11/30/11) and sent to Geotechnical Testing Services in Yuma.</p>
-<div class="gallery"><figure><a href="img/rig-scoria-pad.jpg" target="_blank" rel="noopener"><img src="img/rig-scoria-pad.jpg" alt="A drilling rig on a red-scoria well pad in the Bakken, the exact surface condition the mix design targeted." decoding="async"></a><figcaption>A drilling rig on a red-scoria well pad in the Bakken, the exact surface condition the mix design targeted.</figcaption></figure><figure><a href="img/hess-sign.jpg" target="_blank" rel="noopener"><img src="img/hess-sign.jpg" alt="Hess Corporation&#x27;s Hodenfield 15-23H pad (permit #19318): tank battery, pump jack, and gas flare. The design was developed for Hess." decoding="async"></a><figcaption>Hess Corporation's Hodenfield 15-23H pad (permit #19318): tank battery, pump jack, and gas flare. The design was developed for Hess.</figcaption></figure><figure><a href="img/wellhead-scoria.jpg" target="_blank" rel="noopener"><img src="img/wellhead-scoria.jpg" alt="A wellhead on scoria ground with snow patches, Bakken conditions. This particular well is a ConocoPhillips/Burlington Resources site, shown for ground conditions, not as a Hess project photo." decoding="async"></a><figcaption>A wellhead on scoria ground with snow patches, Bakken conditions. This particular well is a ConocoPhillips/Burlington Resources site, shown for ground conditions, not as a Hess project photo.</figcaption></figure></div>
+<div class="kicker" data-es="El problema">The problem</div>
+<h2 data-es="Plataformas de escoria en el clima del Bakken">Scoria pads in Bakken weather</h2>
+<p data-es="Las plataformas de perforación del Bakken se asientan sobre escoria, la roca de arcilla quemada y rojiza del oeste de Dakota del Norte, sobre arcillas nativas pesadas, trabajadas todo el año a través de ciclos de hielo-deshielo y una larga temporada de lluvias. En noviembre de 2011, se extrajeron muestras de las arcillas in situ y del agregado importado Tipo 5 de plataformas de pozos cerca de Williston (muestreadas el 30/11/11) y se enviaron a Geotechnical Testing Services en Yuma.">Bakken drilling pads sit on scoria, the red, burned clay-rock of western North Dakota, over heavy native clays, worked year-round through freeze-thaw and a long rainy season. In November 2011, samples of the in-place clays and imported Type 5 aggregate were pulled from well-site pads near Williston (sampled 11/30/11) and sent to Geotechnical Testing Services in Yuma.</p>
+<div class="gallery"><figure><a href="img/rig-scoria-pad.jpg" target="_blank" rel="noopener"><img src="img/rig-scoria-pad.jpg" alt="A drilling rig on a red-scoria well pad in the Bakken, the exact surface condition the mix design targeted." decoding="async"></a><figcaption data-es="Una plataforma de perforación sobre una plataforma de pozo de escoria roja en el Bakken, exactamente la condición de superficie a la que apuntaba el diseño de mezcla.">A drilling rig on a red-scoria well pad in the Bakken, the exact surface condition the mix design targeted.</figcaption></figure><figure><a href="img/hess-sign.jpg" target="_blank" rel="noopener"><img src="img/hess-sign.jpg" alt="Hess Corporation&#x27;s Hodenfield 15-23H pad (permit #19318): tank battery, pump jack, and gas flare. The design was developed for Hess." decoding="async"></a><figcaption data-es="Plataforma Hodenfield 15-23H de Hess Corporation (permiso #19318): batería de tanques, bomba de balancín y antorcha de gas. El diseño fue desarrollado para Hess.">Hess Corporation's Hodenfield 15-23H pad (permit #19318): tank battery, pump jack, and gas flare. The design was developed for Hess.</figcaption></figure><figure><a href="img/wellhead-scoria.jpg" target="_blank" rel="noopener"><img src="img/wellhead-scoria.jpg" alt="A wellhead on scoria ground with snow patches, Bakken conditions. This particular well is a ConocoPhillips/Burlington Resources site, shown for ground conditions, not as a Hess project photo." decoding="async"></a><figcaption data-es="Un cabezal de pozo sobre terreno de escoria con parches de nieve, condiciones del Bakken. Este pozo en particular es un sitio de ConocoPhillips/Burlington Resources, mostrado por las condiciones del terreno, no como foto de un proyecto de Hess.">A wellhead on scoria ground with snow patches, Bakken conditions. This particular well is a ConocoPhillips/Burlington Resources site, shown for ground conditions, not as a Hess project photo.</figcaption></figure></div>
 </div></section>
 <section><div class="wrap">
-<div class="kicker">The lab campaign</div>
-<h2>The strongest synergy result in the archive</h2>
-<p>The GTS campaign (Lab Log 11-0464/11-0465, November 2011 through May 2012) tested the native clays and aggregate through Proctor, classification, and months of compressive-strength batches. The headline result: at 21 days, <b>5% cement alone reached 322 psi; cement plus the product reached 664&ndash;746 psi</b>, two to three times the strength, in a signed, controlled comparison. The scoria blends were tested for wet/dry strength retention through May 2012.</p>
-<p><a href="../../#engineering:r-north-dakota-williston-oil-pad-design-mix" target="_top">The full design-mix data is in The Data &rarr;</a></p>
+<div class="kicker" data-es="La campaña de laboratorio">The lab campaign</div>
+<h2 data-es="El resultado de sinergia más fuerte del archivo">The strongest synergy result in the archive</h2>
+<p data-es="La campaña de GTS (Lab Log 11-0464/11-0465, de noviembre de 2011 a mayo de 2012) sometió las arcillas nativas y el agregado a Proctor, clasificación y meses de lotes de resistencia a la compresión. El resultado principal: a los 21 días, <b>el 5% de cemento solo alcanzó 322 psi; el cemento más el producto alcanzó 664&ndash;746 psi</b>, de dos a tres veces la resistencia, en una comparación firmada y controlada. Las mezclas de escoria se probaron para retención de resistencia en húmedo/seco hasta mayo de 2012.">The GTS campaign (Lab Log 11-0464/11-0465, November 2011 through May 2012) tested the native clays and aggregate through Proctor, classification, and months of compressive-strength batches. The headline result: at 21 days, <b>5% cement alone reached 322 psi; cement plus the product reached 664&ndash;746 psi</b>, two to three times the strength, in a signed, controlled comparison. The scoria blends were tested for wet/dry strength retention through May 2012.</p>
+<p><a href="../../#engineering:r-north-dakota-williston-oil-pad-design-mix" target="_top" data-es="Los datos completos del diseño de mezcla están en Los Datos &rarr;">The full design-mix data is in The Data &rarr;</a></p>
 </div></section>
-<div class="wrap"><div class="honesty"><b>Read before citing this study.</b><ul><li><b>Nothing was built.</b> The source deck says it plainly: the mix design "was passed over for the use of wooden flooring due to time constraints" in the weather window. This is a lab-validated design campaign with site sampling, not a constructed project.</li><li>The photographs show <b>site conditions, not treated surfaces</b>. The wellhead photo is a ConocoPhillips/Burlington site and is labeled as context, not as Hess or product work.</li><li>The strength numbers are the lab campaign's: signed, dated, and reproduced in full in The Data. Whether any Hess correspondence survives is on the manufacturer question list.</li></ul></div></div>
-<footer><div class="wrap">Sources: GTS Inc. laboratory campaign, Lab Log 11-0464/11-0465 (samples taken 11/30/11 by PMB LLC; testing through May 2012) and the SSPMB presentation deck's Bakken slides. Part of the In-Place BaseGrade evidence series.</div></footer>
+<div class="wrap"><div class="honesty"><b data-es="Lea esto antes de citar este estudio.">Read before citing this study.</b><ul><li data-es="<b>No se construyó nada.</b> La presentación fuente lo dice claramente: el diseño de mezcla &quot;fue descartado en favor del uso de entablado de madera debido a las restricciones de tiempo&quot; dentro de la ventana climática. Esta es una campaña de diseño validada en laboratorio con muestreo de campo, no un proyecto construido."><b>Nothing was built.</b> The source deck says it plainly: the mix design "was passed over for the use of wooden flooring due to time constraints" in the weather window. This is a lab-validated design campaign with site sampling, not a constructed project.</li><li data-es="Las fotografías muestran <b>condiciones del sitio, no superficies tratadas</b>. La foto del cabezal de pozo es de un sitio de ConocoPhillips/Burlington y está etiquetada como contexto, no como trabajo de Hess o del producto.">The photographs show <b>site conditions, not treated surfaces</b>. The wellhead photo is a ConocoPhillips/Burlington site and is labeled as context, not as Hess or product work.</li><li data-es="Las cifras de resistencia son las de la campaña de laboratorio: firmadas, fechadas y reproducidas en su totalidad en Los Datos. Si sobrevive alguna correspondencia con Hess está en la lista de preguntas pendientes para el fabricante.">The strength numbers are the lab campaign's: signed, dated, and reproduced in full in The Data. Whether any Hess correspondence survives is on the manufacturer question list.</li></ul></div></div>
+<footer><div class="wrap" data-es="Fuentes: campaña de laboratorio de GTS Inc., Lab Log 11-0464/11-0465 (muestras tomadas el 30/11/11 por PMB LLC; pruebas hasta mayo de 2012) y las diapositivas de Bakken de la presentación SSPMB. Parte de la serie de evidencia de In-Place BaseGrade.">Sources: GTS Inc. laboratory campaign, Lab Log 11-0464/11-0465 (samples taken 11/30/11 by PMB LLC; testing through May 2012) and the SSPMB presentation deck's Bakken slides. Part of the In-Place BaseGrade evidence series.</div></footer>
+<script>
+(function(){
+  var STORAGE_KEY='inplace-lang';
+  function applyLang(lang){
+    var nodes=document.querySelectorAll('[data-es]');
+    nodes.forEach(function(el){
+      if(!el.hasAttribute('data-en')){ el.setAttribute('data-en', el.innerHTML); }
+      el.innerHTML = lang==='es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
+    });
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.js-lang-toggle').forEach(function(btn){
+      var enSpan=btn.querySelector('[data-lang-btn="en"]');
+      var esSpan=btn.querySelector('[data-lang-btn="es"]');
+      if(enSpan) enSpan.classList.toggle('active', lang==='en');
+      if(esSpan) esSpan.classList.toggle('active', lang==='es');
+    });
+  }
+  function toggleLang(){
+    var current = document.documentElement.lang==='es' ? 'es' : 'en';
+    var next = current==='es' ? 'en' : 'es';
+    try{ localStorage.setItem(STORAGE_KEY, next); }catch(e){}
+    applyLang(next);
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var stored=null;
+    try{ stored=localStorage.getItem(STORAGE_KEY); }catch(e){}
+    applyLang(stored==='es'?'es':'en');
+    document.querySelectorAll('.js-lang-toggle').forEach(function(btn){
+      btn.addEventListener('click', toggleLang);
+    });
+  });
+  window.addEventListener('message', function(e){
+    if(!e.data || e.data.type!=='inplace-lang') return;
+    var lang = e.data.lang==='es' ? 'es' : 'en';
+    try{ localStorage.setItem(STORAGE_KEY, lang); }catch(err){}
+    applyLang(lang);
+  });
+})();
+</script>
 </body>
 </html>
